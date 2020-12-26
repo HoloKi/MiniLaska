@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['riempi_21',['riempi',['../group__CreaScacchiera.html#ga5ff6500a528b4775974b027e9e153848',1,'main.c']]]
+  ['obbligomangiare_29',['obbligomangiare',['../group__MangiaPedine.html#gad1b8aac1042e7548e3978314fdc82b2c',1,'main.c']]]
 ];

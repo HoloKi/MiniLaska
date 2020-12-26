@@ -150,8 +150,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>controllo_pedine_prese
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><b>0</b> nel caso non fosse possibile un'azione, <b>1</b> nel caso fosse possibile l'azione. </dd></dl>
 <p><b>Condizione in cui la destinazione è fuori dalla scacchiera.</b></p>
-<div class="fragment"><div class="line">   <span class="keywordflow">if</span>(x&lt;0 || y&lt;0 || x&gt;=7 || y&gt;=7){</div>
-<div class="line"><span class="keywordflow">return</span> 0;</div>
+<div class="fragment"><div class="line"><span class="keywordflow">if</span>(x&lt;0 || y&lt;0 || x&gt;=7 || y&gt;=7){</div>
+<div class="line">     <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
 </div><!-- fragment --><p><b>Condizione in cui non si muova in obliquo quindi solamente in avanti.</b> </p><div class="fragment"><div class="line"><span class="keywordflow">if</span>(b==y){</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>

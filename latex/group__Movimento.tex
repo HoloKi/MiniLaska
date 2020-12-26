@@ -1,0 +1,158 @@
+\hypertarget{group__Movimento}{}\doxysection{Movimento}
+\label{group__Movimento}\index{Movimento@{Movimento}}
+
+
+Funzioni per definire il movimento delle pedine.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{group__Movimento_ga1a75d1edb26b5a9d953d345f2fbed691}{movimentodue}} (\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$scacchiera, int a, int b, int x, int y)
+\item 
+int \mbox{\hyperlink{group__Movimento_ga1b331e1f9081e2b2a6f4f886441617aa}{movimentouno}} (\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$scacchiera, int a, int b, int x, int y)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Funzioni per definire il movimento delle pedine. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__Movimento_ga1a75d1edb26b5a9d953d345f2fbed691}\label{group__Movimento_ga1a75d1edb26b5a9d953d345f2fbed691}} 
+\index{Movimento@{Movimento}!movimentodue@{movimentodue}}
+\index{movimentodue@{movimentodue}!Movimento@{Movimento}}
+\doxysubsubsection{\texorpdfstring{movimentodue()}{movimentodue()}}
+{\footnotesize\ttfamily movimentodue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$}]{scacchiera,  }\item[{int}]{a,  }\item[{int}]{b,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+Funzione che determina il movimento del giocatore 2 
+\begin{DoxyParams}{Parameters}
+{\em scacchiera} & = puntatore a scacchiera \\
+\hline
+{\em a} & = x di (x,y) dove è presente la pedina \\
+\hline
+{\em b} & = y di (x,y) dove è presente la pedina \\
+\hline
+{\em x} & = x di (x,y) dove voglio che vada la pedina \\
+\hline
+{\em y} & = y di (x,y) dove voglio che vada la pedina \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 se va a buon fine, 0 se non è possibile efettuare la mossa 
+\end{DoxyReturn}
+{\bfseries{Controllo la pedina}} \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__Controlli_ga6c72c18b780416a4f4a64dbf72a85b6e}{controllopedina()}} 
+
+\mbox{\hyperlink{group__Controlli_gaad8e6ba684c82928f2637f99edb09112}{controllogrado()}}
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{grado = \mbox{\hyperlink{group__Controlli_gaad8e6ba684c82928f2637f99edb09112}{controllogrado}}(scacchiera,a,b);}
+\DoxyCodeLine{g = \mbox{\hyperlink{group__Controlli_ga6c72c18b780416a4f4a64dbf72a85b6e}{controllopedina}}(scacchiera,a,b,2);}
+\DoxyCodeLine{\textcolor{keywordflow}{if}(g==0 || grado==-\/1)\{}
+\DoxyCodeLine{     printf(\textcolor{stringliteral}{"coordinate non valide, inseriscile correttamente\(\backslash\)n"});}
+\DoxyCodeLine{     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+{\bfseries{Controllo che la pedina sia il giocatore giusto, controllo aggiuntivo}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{giocatore = scacchiera[a][b].composition[grado];}
+\DoxyCodeLine{\textcolor{keywordflow}{if}(giocatore==1 || giocatore ==3) \{}
+\DoxyCodeLine{     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+{\bfseries{Controllo la destinazione della pedina}} \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__Controlli_gacfc437273f1b61ce3409801aa681ae51}{controllodestinazione()}}
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{controllo = \mbox{\hyperlink{group__Controlli_gacfc437273f1b61ce3409801aa681ae51}{controllodestinazione}}(scacchiera,a,b,x,y,giocatore);}
+\DoxyCodeLine{\textcolor{keywordflow}{if}(controllo==0) \{}
+\DoxyCodeLine{     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+{\bfseries{Nel caso in cui vadano a buon fine i controlli e faccio un solo movimento di salto, controllo se sto evitando di mangiare pedine}} \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__MangiaPedine_gad1b8aac1042e7548e3978314fdc82b2c}{obbligomangiare()}} 
+
+\mbox{\hyperlink{group__MangiaPedine_ga452cd71feecae7e63bf3d6b4cad5d8b9}{spostapedina()}}
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}(abs(a-\/x)==1 \&\& abs(b-\/y)==1)\{}
+\DoxyCodeLine{     c = \mbox{\hyperlink{group__MangiaPedine_gad1b8aac1042e7548e3978314fdc82b2c}{obbligomangiare}}(scacchiera,2);}
+\DoxyCodeLine{     \textcolor{keywordflow}{if}(c==1)\{}
+\DoxyCodeLine{         printf(\textcolor{stringliteral}{"Hai una pedina da mangiare!\(\backslash\)n"});}
+\DoxyCodeLine{         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{         \textcolor{keywordflow}{if}(x==0 \&\& giocatore==2)\{}
+\DoxyCodeLine{             \mbox{\hyperlink{group__MangiaPedine_ga452cd71feecae7e63bf3d6b4cad5d8b9}{spostapedina}}(scacchiera,a,b,x,y);}
+\DoxyCodeLine{             scacchiera[x][y].composition[grado]=4;}
+\DoxyCodeLine{             \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{         \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{             \mbox{\hyperlink{group__MangiaPedine_ga452cd71feecae7e63bf3d6b4cad5d8b9}{spostapedina}}(scacchiera,a,b,x,y);}
+\DoxyCodeLine{             \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{         \}}
+\DoxyCodeLine{     \}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+{\bfseries{Caso in cui salto 2 posizioni cioè mangio una pedina}} \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__MangiaPedine_ga6ed6939c1b22caa3bce16a9ffa5faa56}{controllamangio()}} 
+
+\mbox{\hyperlink{group__Controlli_gaad8e6ba684c82928f2637f99edb09112}{controllogrado()}} 
+
+\mbox{\hyperlink{group__MangiaPedine_ga384bdce98cf8d820e2d1e0c34d98ece4}{mangia()}}
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}(abs(a-\/x)==2 \&\& abs(b-\/y)==2)\{}
+\DoxyCodeLine{     f =  \mbox{\hyperlink{group__MangiaPedine_ga6ed6939c1b22caa3bce16a9ffa5faa56}{controllamangio}}(scacchiera,a,b,x,y,2);}
+\DoxyCodeLine{     \textcolor{keywordflow}{if}(f==0)\{}
+\DoxyCodeLine{         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{         \textcolor{keywordflow}{if}(x==0 \&\& giocatore==2)\{}
+\DoxyCodeLine{             \mbox{\hyperlink{group__MangiaPedine_ga384bdce98cf8d820e2d1e0c34d98ece4}{mangia}}(scacchiera,a,b,x,y,grado);}
+\DoxyCodeLine{             grado = \mbox{\hyperlink{group__Controlli_gaad8e6ba684c82928f2637f99edb09112}{controllogrado}}(scacchiera,x,y);}
+\DoxyCodeLine{             scacchiera[x][y].composition[grado]=4;}
+\DoxyCodeLine{             \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{         \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{             \mbox{\hyperlink{group__MangiaPedine_ga384bdce98cf8d820e2d1e0c34d98ece4}{mangia}}(scacchiera,a,b,x,y,grado);}
+\DoxyCodeLine{             \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{         \}}
+\DoxyCodeLine{     \}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__Movimento_ga1b331e1f9081e2b2a6f4f886441617aa}\label{group__Movimento_ga1b331e1f9081e2b2a6f4f886441617aa}} 
+\index{Movimento@{Movimento}!movimentouno@{movimentouno}}
+\index{movimentouno@{movimentouno}!Movimento@{Movimento}}
+\doxysubsubsection{\texorpdfstring{movimentouno()}{movimentouno()}}
+{\footnotesize\ttfamily movimentouno (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$}]{scacchiera,  }\item[{int}]{a,  }\item[{int}]{b,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+Funzione che sposta la pedina uno, simile al movimentodue \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__Movimento_ga1a75d1edb26b5a9d953d345f2fbed691}{movimentodue()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em scacchiera} & = puntatore a scacchiera \\
+\hline
+{\em a} & = x di (x,y) dove è presente la pedina \\
+\hline
+{\em b} & = y di (x,y) dove è presente la pedina \\
+\hline
+{\em x} & = x di (x,y) dove voglio che vada la pedina \\
+\hline
+{\em y} & = y di (x,y) dove voglio che vada la pedina \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 se va a buon fine, 0 se non è possibile efettuare la mossa 
+\end{DoxyReturn}
