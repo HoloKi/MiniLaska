@@ -9,14 +9,13 @@ Funzioni definite al controllo delle posizioni e delle pedine~\newline
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{group__Controlli_gacfc437273f1b61ce3409801aa681ae51}{controllodestinazione}} (\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$scacchiera, int a, int b, int x, int y, int player)
+int \mbox{\hyperlink{group__Controlli_gad7719c611aad5c026c9292e225ee9743}{controllodestinazione}} (\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$scacchiera, int a, int b, int x, int y, int player)
 \item 
-int \mbox{\hyperlink{group__Controlli_gaad8e6ba684c82928f2637f99edb09112}{controllogrado}} (\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$scacchiera, int a, int b)
+int \mbox{\hyperlink{group__Controlli_ga69b4af7fe90b1218e1c92301e430a07e}{controllogrado}} (\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$scacchiera, int a, int b)
 \item 
-\mbox{\Hypertarget{group__Controlli_ga7d2bfddfecb1e61434897c5c2d494e83}\label{group__Controlli_ga7d2bfddfecb1e61434897c5c2d494e83}} 
-int {\bfseries controllo\+\_\+pedine\+\_\+presenti} (\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$scacchiera)
+int \mbox{\hyperlink{group__Controlli_ga7d2bfddfecb1e61434897c5c2d494e83}{controllo\+\_\+pedine\+\_\+presenti}} (\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$scacchiera)
 \item 
-int \mbox{\hyperlink{group__Controlli_ga6c72c18b780416a4f4a64dbf72a85b6e}{controllopedina}} (\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$scacchiera, int a, int b, int player)
+int \mbox{\hyperlink{group__Controlli_ga692d3eeb8c4bd279ea8eecee895d8b15}{controllopedina}} (\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$scacchiera, int a, int b, int player)
 \end{DoxyCompactItemize}
 
 
@@ -27,11 +26,31 @@ Funzioni definite al controllo delle posizioni e delle pedine~\newline
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{group__Controlli_gacfc437273f1b61ce3409801aa681ae51}\label{group__Controlli_gacfc437273f1b61ce3409801aa681ae51}} 
+\mbox{\Hypertarget{group__Controlli_ga7d2bfddfecb1e61434897c5c2d494e83}\label{group__Controlli_ga7d2bfddfecb1e61434897c5c2d494e83}} 
+\index{Controlli@{Controlli}!controllo\_pedine\_presenti@{controllo\_pedine\_presenti}}
+\index{controllo\_pedine\_presenti@{controllo\_pedine\_presenti}!Controlli@{Controlli}}
+\doxysubsubsection{\texorpdfstring{controllo\_pedine\_presenti()}{controllo\_pedine\_presenti()}}
+{\footnotesize\ttfamily int controllo\+\_\+pedine\+\_\+presenti (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$}]{scacchiera }\end{DoxyParamCaption})}
+
+funzione che mi dice se nella scacchiera comandano solo pedine dello stesso giocatore
+
+
+\begin{DoxyParams}{Parameters}
+{\em scacchiera} & = puntatore alla scacchiera \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ritorna {\bfseries{da 0 a 2}}, se il valore ritornato è 1 oppure 2 allora vuol dire che uno dei due giocatori ha vinto 
+\end{DoxyReturn}
+conta1 viene incrementato ogni volta che in una casella la pedina più alta appartiene al player1, conta2 invece viene incrementato ogni volta in cui in una casella la pedina più alta appartiene al player2
+
+caso in cui il player1 non ha pedine che comandano, ovvero non ha pedine presenti in cima ad alcuna torre
+
+caso in cui il player2 non ha pedine che comandano, ovvero non ha pedine presenti in cima ad alcuna torre\mbox{\Hypertarget{group__Controlli_gad7719c611aad5c026c9292e225ee9743}\label{group__Controlli_gad7719c611aad5c026c9292e225ee9743}} 
 \index{Controlli@{Controlli}!controllodestinazione@{controllodestinazione}}
 \index{controllodestinazione@{controllodestinazione}!Controlli@{Controlli}}
 \doxysubsubsection{\texorpdfstring{controllodestinazione()}{controllodestinazione()}}
-{\footnotesize\ttfamily controllodestinazione (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$}]{scacchiera,  }\item[{int}]{a,  }\item[{int}]{b,  }\item[{int}]{x,  }\item[{int}]{u,  }\item[{int}]{player }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int controllodestinazione (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$}]{scacchiera,  }\item[{int}]{a,  }\item[{int}]{b,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{player }\end{DoxyParamCaption})}
 
 Funzione che controlla la destinazione della pedina.
 
@@ -100,18 +119,17 @@ Funzione che controlla la destinazione della pedina.
 \DoxyCodeLine{         \textcolor{keywordflow}{return} 0;}
 \DoxyCodeLine{     \}}
 \DoxyCodeLine{ \}}
-\DoxyCodeLine{}
 \DoxyCodeLine{ \textcolor{keywordflow}{if} (player == 1) \{}
 \DoxyCodeLine{     \textcolor{keywordflow}{if} (a > x) \{}
 \DoxyCodeLine{         \textcolor{keywordflow}{return} 0;}
 \DoxyCodeLine{     \}}
 \DoxyCodeLine{ \}}
 \end{DoxyCode}
-\mbox{\Hypertarget{group__Controlli_gaad8e6ba684c82928f2637f99edb09112}\label{group__Controlli_gaad8e6ba684c82928f2637f99edb09112}} 
+\mbox{\Hypertarget{group__Controlli_ga69b4af7fe90b1218e1c92301e430a07e}\label{group__Controlli_ga69b4af7fe90b1218e1c92301e430a07e}} 
 \index{Controlli@{Controlli}!controllogrado@{controllogrado}}
 \index{controllogrado@{controllogrado}!Controlli@{Controlli}}
 \doxysubsubsection{\texorpdfstring{controllogrado()}{controllogrado()}}
-{\footnotesize\ttfamily controllogrado (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$}]{scacchiera,  }\item[{int}]{a,  }\item[{int}]{b }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int controllogrado (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$}]{scacchiera,  }\item[{int}]{a,  }\item[{int}]{b }\end{DoxyParamCaption})}
 
 Funzione che controlla la posizione piu alta della pedina e mi restituisce la posizione.
 
@@ -163,14 +181,14 @@ Ritorna {\bfseries{da 0 a 2}}, cioè il valore dove è presente una pedina diver
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordflow}{return} 2;}
 \end{DoxyCode}
-\mbox{\Hypertarget{group__Controlli_ga6c72c18b780416a4f4a64dbf72a85b6e}\label{group__Controlli_ga6c72c18b780416a4f4a64dbf72a85b6e}} 
+\mbox{\Hypertarget{group__Controlli_ga692d3eeb8c4bd279ea8eecee895d8b15}\label{group__Controlli_ga692d3eeb8c4bd279ea8eecee895d8b15}} 
 \index{Controlli@{Controlli}!controllopedina@{controllopedina}}
 \index{controllopedina@{controllopedina}!Controlli@{Controlli}}
 \doxysubsubsection{\texorpdfstring{controllopedina()}{controllopedina()}}
-{\footnotesize\ttfamily controllopedina (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$}]{scacchiera,  }\item[{int}]{a,  }\item[{int}]{b,  }\item[{int}]{player }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int controllopedina (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$}]{scacchiera,  }\item[{int}]{a,  }\item[{int}]{b,  }\item[{int}]{player }\end{DoxyParamCaption})}
 
 Funzione che fa il controllo sulla posizione della pedina. \begin{DoxySeeAlso}{See also}
-\mbox{\hyperlink{group__Controlli_gaad8e6ba684c82928f2637f99edb09112}{controllogrado()}} 
+\mbox{\hyperlink{group__Controlli_ga69b4af7fe90b1218e1c92301e430a07e}{controllogrado()}} 
 \end{DoxySeeAlso}
 
 \begin{DoxyParams}{Parameters}

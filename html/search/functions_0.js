@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['angolopedine_20',['angolopedine',['../group__MangiaPedine.html#gade548d0b81e3df317cac2b46e46ceb1b',1,'main.c']]]
+  ['angolopedine_21',['angolopedine',['../group__MangiaPedine.html#gab216490cc4273357fc19c55f9768ff0e',1,'laska.c']]]
 ];

@@ -73,22 +73,22 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga1a75d1edb26b5a9d953d345f2fbed691"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Movimento.html#ga1a75d1edb26b5a9d953d345f2fbed691">movimentodue</a> (<a class="el" href="structtower.html">tower_t</a> **scacchiera, int a, int b, int x, int y)</td></tr>
-<tr class="separator:ga1a75d1edb26b5a9d953d345f2fbed691"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1b331e1f9081e2b2a6f4f886441617aa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Movimento.html#ga1b331e1f9081e2b2a6f4f886441617aa">movimentouno</a> (<a class="el" href="structtower.html">tower_t</a> **scacchiera, int a, int b, int x, int y)</td></tr>
-<tr class="separator:ga1b331e1f9081e2b2a6f4f886441617aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga10a194a871ee2c015343a3c3635736bb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Movimento.html#ga10a194a871ee2c015343a3c3635736bb">movimentodue</a> (<a class="el" href="structtower.html">tower_t</a> **scacchiera, int a, int b, int x, int y)</td></tr>
+<tr class="separator:ga10a194a871ee2c015343a3c3635736bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga03e3c3ea0f620303014e51243f2c33de"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Movimento.html#ga03e3c3ea0f620303014e51243f2c33de">movimentouno</a> (<a class="el" href="structtower.html">tower_t</a> **scacchiera, int a, int b, int x, int y)</td></tr>
+<tr class="separator:ga03e3c3ea0f620303014e51243f2c33de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Funzioni per definire il movimento delle pedine. </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga1a75d1edb26b5a9d953d345f2fbed691"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1a75d1edb26b5a9d953d345f2fbed691">&#9670;&nbsp;</a></span>movimentodue()</h2>
+<a id="ga10a194a871ee2c015343a3c3635736bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga10a194a871ee2c015343a3c3635736bb">&#9670;&nbsp;</a></span>movimentodue()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">movimentodue </td>
+          <td class="memname">int movimentodue </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structtower.html">tower_t</a> **&#160;</td>
           <td class="paramname"><em>scacchiera</em>, </td>
@@ -135,11 +135,11 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>1 se va a buon fine, 0 se non è possibile efettuare la mossa </dd></dl>
-<p><b>Controllo la pedina</b> </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="group__Controlli.html#ga6c72c18b780416a4f4a64dbf72a85b6e">controllopedina()</a> </dd>
+<p><b>Controllo la pedina</b> </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="group__Controlli.html#ga692d3eeb8c4bd279ea8eecee895d8b15">controllopedina()</a> </dd>
 <dd>
-<a class="el" href="group__Controlli.html#gaad8e6ba684c82928f2637f99edb09112">controllogrado()</a></dd></dl>
-<div class="fragment"><div class="line">grado = <a class="code" href="group__Controlli.html#gaad8e6ba684c82928f2637f99edb09112">controllogrado</a>(scacchiera,a,b);</div>
-<div class="line">g = <a class="code" href="group__Controlli.html#ga6c72c18b780416a4f4a64dbf72a85b6e">controllopedina</a>(scacchiera,a,b,2);</div>
+<a class="el" href="group__Controlli.html#ga69b4af7fe90b1218e1c92301e430a07e">controllogrado()</a></dd></dl>
+<div class="fragment"><div class="line">grado = <a class="code" href="group__Controlli.html#ga69b4af7fe90b1218e1c92301e430a07e">controllogrado</a>(scacchiera,a,b);</div>
+<div class="line">g = <a class="code" href="group__Controlli.html#ga692d3eeb8c4bd279ea8eecee895d8b15">controllopedina</a>(scacchiera,a,b,2);</div>
 <div class="line"><span class="keywordflow">if</span>(g==0 || grado==-1){</div>
 <div class="line">     printf(<span class="stringliteral">&quot;coordinate non valide, inseriscile correttamente\n&quot;</span>);</div>
 <div class="line">     <span class="keywordflow">return</span> 0;</div>
@@ -148,47 +148,47 @@ Functions</h2></td></tr>
 <div class="line"><span class="keywordflow">if</span>(giocatore==1 || giocatore ==3) {</div>
 <div class="line">     <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-</div><!-- fragment --><p><b>Controllo la destinazione della pedina</b> </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="group__Controlli.html#gacfc437273f1b61ce3409801aa681ae51">controllodestinazione()</a></dd></dl>
-<div class="fragment"><div class="line">controllo = <a class="code" href="group__Controlli.html#gacfc437273f1b61ce3409801aa681ae51">controllodestinazione</a>(scacchiera,a,b,x,y,giocatore);</div>
+</div><!-- fragment --><p><b>Controllo la destinazione della pedina</b> </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="group__Controlli.html#gad7719c611aad5c026c9292e225ee9743">controllodestinazione()</a></dd></dl>
+<div class="fragment"><div class="line">controllo = <a class="code" href="group__Controlli.html#gad7719c611aad5c026c9292e225ee9743">controllodestinazione</a>(scacchiera,a,b,x,y,giocatore);</div>
 <div class="line"><span class="keywordflow">if</span>(controllo==0) {</div>
 <div class="line">     <span class="keywordflow">return</span> 0;</div>
 <div class="line">}</div>
-</div><!-- fragment --><p><b>Nel caso in cui vadano a buon fine i controlli e faccio un solo movimento di salto, controllo se sto evitando di mangiare pedine</b> </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="group__MangiaPedine.html#gad1b8aac1042e7548e3978314fdc82b2c">obbligomangiare()</a> </dd>
+</div><!-- fragment --><p><b>Nel caso in cui vadano a buon fine i controlli e faccio un solo movimento di salto, controllo se sto evitando di mangiare pedine</b> </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="group__MangiaPedine.html#ga05cdb52671f313436a4d8523daacebba">obbligomangiare()</a> </dd>
 <dd>
-<a class="el" href="group__MangiaPedine.html#ga452cd71feecae7e63bf3d6b4cad5d8b9">spostapedina()</a></dd></dl>
+<a class="el" href="group__MangiaPedine.html#gafe0e477a00ad566341caaa78d2f2184b">spostapedina()</a></dd></dl>
 <div class="fragment"><div class="line"><span class="keywordflow">if</span>(abs(a-x)==1 &amp;&amp; abs(b-y)==1){</div>
-<div class="line">     c = <a class="code" href="group__MangiaPedine.html#gad1b8aac1042e7548e3978314fdc82b2c">obbligomangiare</a>(scacchiera,2);</div>
+<div class="line">     c = <a class="code" href="group__MangiaPedine.html#ga05cdb52671f313436a4d8523daacebba">obbligomangiare</a>(scacchiera,2);</div>
 <div class="line">     <span class="keywordflow">if</span>(c==1){</div>
 <div class="line">         printf(<span class="stringliteral">&quot;Hai una pedina da mangiare!\n&quot;</span>);</div>
 <div class="line">         <span class="keywordflow">return</span> 0;</div>
 <div class="line">     }<span class="keywordflow">else</span>{</div>
 <div class="line">         <span class="keywordflow">if</span>(x==0 &amp;&amp; giocatore==2){</div>
-<div class="line">             <a class="code" href="group__MangiaPedine.html#ga452cd71feecae7e63bf3d6b4cad5d8b9">spostapedina</a>(scacchiera,a,b,x,y);</div>
+<div class="line">             <a class="code" href="group__MangiaPedine.html#gafe0e477a00ad566341caaa78d2f2184b">spostapedina</a>(scacchiera,a,b,x,y);</div>
 <div class="line">             scacchiera[x][y].composition[grado]=4;</div>
 <div class="line">             <span class="keywordflow">return</span> 1;</div>
 <div class="line">         }<span class="keywordflow">else</span>{</div>
-<div class="line">             <a class="code" href="group__MangiaPedine.html#ga452cd71feecae7e63bf3d6b4cad5d8b9">spostapedina</a>(scacchiera,a,b,x,y);</div>
+<div class="line">             <a class="code" href="group__MangiaPedine.html#gafe0e477a00ad566341caaa78d2f2184b">spostapedina</a>(scacchiera,a,b,x,y);</div>
 <div class="line">             <span class="keywordflow">return</span> 1;</div>
 <div class="line">         }</div>
 <div class="line">     }</div>
 <div class="line">}</div>
-</div><!-- fragment --><p><b>Caso in cui salto 2 posizioni cioè mangio una pedina</b> </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="group__MangiaPedine.html#ga6ed6939c1b22caa3bce16a9ffa5faa56">controllamangio()</a> </dd>
+</div><!-- fragment --><p><b>Caso in cui salto 2 posizioni cioè mangio una pedina</b> </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="group__MangiaPedine.html#gab771a0fd91d5b58f55bf92ef61e7bb83">controllamangio()</a> </dd>
 <dd>
-<a class="el" href="group__Controlli.html#gaad8e6ba684c82928f2637f99edb09112">controllogrado()</a> </dd>
+<a class="el" href="group__Controlli.html#ga69b4af7fe90b1218e1c92301e430a07e">controllogrado()</a> </dd>
 <dd>
-<a class="el" href="group__MangiaPedine.html#ga384bdce98cf8d820e2d1e0c34d98ece4">mangia()</a></dd></dl>
+<a class="el" href="group__MangiaPedine.html#ga0f29adc5d1bd1c9500ed08e4c6f21edd">mangia()</a></dd></dl>
 <div class="fragment"><div class="line"><span class="keywordflow">if</span>(abs(a-x)==2 &amp;&amp; abs(b-y)==2){</div>
-<div class="line">     f =  <a class="code" href="group__MangiaPedine.html#ga6ed6939c1b22caa3bce16a9ffa5faa56">controllamangio</a>(scacchiera,a,b,x,y,2);</div>
+<div class="line">     f =  <a class="code" href="group__MangiaPedine.html#gab771a0fd91d5b58f55bf92ef61e7bb83">controllamangio</a>(scacchiera,a,b,x,y,2);</div>
 <div class="line">     <span class="keywordflow">if</span>(f==0){</div>
 <div class="line">         <span class="keywordflow">return</span> 0;</div>
 <div class="line">     }<span class="keywordflow">else</span>{</div>
 <div class="line">         <span class="keywordflow">if</span>(x==0 &amp;&amp; giocatore==2){</div>
-<div class="line">             <a class="code" href="group__MangiaPedine.html#ga384bdce98cf8d820e2d1e0c34d98ece4">mangia</a>(scacchiera,a,b,x,y,grado);</div>
-<div class="line">             grado = <a class="code" href="group__Controlli.html#gaad8e6ba684c82928f2637f99edb09112">controllogrado</a>(scacchiera,x,y);</div>
+<div class="line">             <a class="code" href="group__MangiaPedine.html#ga0f29adc5d1bd1c9500ed08e4c6f21edd">mangia</a>(scacchiera,a,b,x,y,grado);</div>
+<div class="line">             grado = <a class="code" href="group__Controlli.html#ga69b4af7fe90b1218e1c92301e430a07e">controllogrado</a>(scacchiera,x,y);</div>
 <div class="line">             scacchiera[x][y].composition[grado]=4;</div>
 <div class="line">             <span class="keywordflow">return</span> 1;</div>
 <div class="line">         }<span class="keywordflow">else</span>{</div>
-<div class="line">             <a class="code" href="group__MangiaPedine.html#ga384bdce98cf8d820e2d1e0c34d98ece4">mangia</a>(scacchiera,a,b,x,y,grado);</div>
+<div class="line">             <a class="code" href="group__MangiaPedine.html#ga0f29adc5d1bd1c9500ed08e4c6f21edd">mangia</a>(scacchiera,a,b,x,y,grado);</div>
 <div class="line">             <span class="keywordflow">return</span> 1;</div>
 <div class="line">         }</div>
 <div class="line">     }</div>
@@ -196,14 +196,14 @@ Functions</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="ga1b331e1f9081e2b2a6f4f886441617aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1b331e1f9081e2b2a6f4f886441617aa">&#9670;&nbsp;</a></span>movimentouno()</h2>
+<a id="ga03e3c3ea0f620303014e51243f2c33de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga03e3c3ea0f620303014e51243f2c33de">&#9670;&nbsp;</a></span>movimentouno()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">movimentouno </td>
+          <td class="memname">int movimentouno </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structtower.html">tower_t</a> **&#160;</td>
           <td class="paramname"><em>scacchiera</em>, </td>
@@ -239,7 +239,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Funzione che sposta la pedina uno, simile al movimentodue </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="group__Movimento.html#ga1a75d1edb26b5a9d953d345f2fbed691">movimentodue()</a> </dd></dl>
+<p>Funzione che sposta la pedina uno, simile al movimentodue </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="group__Movimento.html#ga10a194a871ee2c015343a3c3635736bb">movimentodue()</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">scacchiera</td><td>= puntatore a scacchiera </td></tr>
@@ -255,13 +255,13 @@ Functions</h2></td></tr>
 </div>
 </div>
 </div><!-- contents -->
-<div class="ttc" id="agroup__Controlli_html_gaad8e6ba684c82928f2637f99edb09112"><div class="ttname"><a href="group__Controlli.html#gaad8e6ba684c82928f2637f99edb09112">controllogrado</a></div><div class="ttdeci">int controllogrado(tower_t **scacchiera, int a, int b)</div><div class="ttdef"><b>Definition:</b> main.c:204</div></div>
-<div class="ttc" id="agroup__MangiaPedine_html_ga452cd71feecae7e63bf3d6b4cad5d8b9"><div class="ttname"><a href="group__MangiaPedine.html#ga452cd71feecae7e63bf3d6b4cad5d8b9">spostapedina</a></div><div class="ttdeci">void spostapedina(tower_t **scacchiera, int a, int b, int x, int y)</div><div class="ttdef"><b>Definition:</b> main.c:369</div></div>
-<div class="ttc" id="agroup__MangiaPedine_html_ga6ed6939c1b22caa3bce16a9ffa5faa56"><div class="ttname"><a href="group__MangiaPedine.html#ga6ed6939c1b22caa3bce16a9ffa5faa56">controllamangio</a></div><div class="ttdeci">int controllamangio(tower_t **scacchiera, int a, int b, int x, int y, int player)</div><div class="ttdef"><b>Definition:</b> main.c:391</div></div>
-<div class="ttc" id="agroup__MangiaPedine_html_ga384bdce98cf8d820e2d1e0c34d98ece4"><div class="ttname"><a href="group__MangiaPedine.html#ga384bdce98cf8d820e2d1e0c34d98ece4">mangia</a></div><div class="ttdeci">void mangia(tower_t **scacchiera, int a, int b, int x, int y, int grado)</div><div class="ttdef"><b>Definition:</b> main.c:438</div></div>
-<div class="ttc" id="agroup__Controlli_html_gacfc437273f1b61ce3409801aa681ae51"><div class="ttname"><a href="group__Controlli.html#gacfc437273f1b61ce3409801aa681ae51">controllodestinazione</a></div><div class="ttdeci">int controllodestinazione(tower_t **scacchiera, int a, int b, int x, int y, int player)</div><div class="ttdef"><b>Definition:</b> main.c:106</div></div>
-<div class="ttc" id="agroup__MangiaPedine_html_gad1b8aac1042e7548e3978314fdc82b2c"><div class="ttname"><a href="group__MangiaPedine.html#gad1b8aac1042e7548e3978314fdc82b2c">obbligomangiare</a></div><div class="ttdeci">int obbligomangiare(tower_t **scacchiera, int player)</div><div class="ttdef"><b>Definition:</b> main.c:645</div></div>
-<div class="ttc" id="agroup__Controlli_html_ga6c72c18b780416a4f4a64dbf72a85b6e"><div class="ttname"><a href="group__Controlli.html#ga6c72c18b780416a4f4a64dbf72a85b6e">controllopedina</a></div><div class="ttdeci">int controllopedina(tower_t **scacchiera, int a, int b, int player)</div><div class="ttdef"><b>Definition:</b> main.c:296</div></div>
+<div class="ttc" id="agroup__Controlli_html_ga692d3eeb8c4bd279ea8eecee895d8b15"><div class="ttname"><a href="group__Controlli.html#ga692d3eeb8c4bd279ea8eecee895d8b15">controllopedina</a></div><div class="ttdeci">int controllopedina(tower_t **scacchiera, int a, int b, int player)</div><div class="ttdef"><b>Definition:</b> laska.c:283</div></div>
+<div class="ttc" id="agroup__MangiaPedine_html_ga0f29adc5d1bd1c9500ed08e4c6f21edd"><div class="ttname"><a href="group__MangiaPedine.html#ga0f29adc5d1bd1c9500ed08e4c6f21edd">mangia</a></div><div class="ttdeci">void mangia(tower_t **scacchiera, int a, int b, int x, int y, int grado)</div><div class="ttdef"><b>Definition:</b> laska.c:427</div></div>
+<div class="ttc" id="agroup__MangiaPedine_html_gafe0e477a00ad566341caaa78d2f2184b"><div class="ttname"><a href="group__MangiaPedine.html#gafe0e477a00ad566341caaa78d2f2184b">spostapedina</a></div><div class="ttdeci">void spostapedina(tower_t **scacchiera, int a, int b, int x, int y)</div><div class="ttdef"><b>Definition:</b> laska.c:352</div></div>
+<div class="ttc" id="agroup__Controlli_html_gad7719c611aad5c026c9292e225ee9743"><div class="ttname"><a href="group__Controlli.html#gad7719c611aad5c026c9292e225ee9743">controllodestinazione</a></div><div class="ttdeci">int controllodestinazione(tower_t **scacchiera, int a, int b, int x, int y, int player)</div><div class="ttdef"><b>Definition:</b> laska.c:93</div></div>
+<div class="ttc" id="agroup__MangiaPedine_html_gab771a0fd91d5b58f55bf92ef61e7bb83"><div class="ttname"><a href="group__MangiaPedine.html#gab771a0fd91d5b58f55bf92ef61e7bb83">controllamangio</a></div><div class="ttdeci">int controllamangio(tower_t **scacchiera, int a, int b, int x, int y, int player)</div><div class="ttdef"><b>Definition:</b> laska.c:374</div></div>
+<div class="ttc" id="agroup__MangiaPedine_html_ga05cdb52671f313436a4d8523daacebba"><div class="ttname"><a href="group__MangiaPedine.html#ga05cdb52671f313436a4d8523daacebba">obbligomangiare</a></div><div class="ttdeci">int obbligomangiare(tower_t **scacchiera, int player)</div><div class="ttdef"><b>Definition:</b> laska.c:630</div></div>
+<div class="ttc" id="agroup__Controlli_html_ga69b4af7fe90b1218e1c92301e430a07e"><div class="ttname"><a href="group__Controlli.html#ga69b4af7fe90b1218e1c92301e430a07e">controllogrado</a></div><div class="ttdeci">int controllogrado(tower_t **scacchiera, int a, int b)</div><div class="ttdef"><b>Definition:</b> laska.c:183</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

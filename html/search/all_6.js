@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['spostapedina_17',['spostapedina',['../group__MangiaPedine.html#ga452cd71feecae7e63bf3d6b4cad5d8b9',1,'main.c']]]
+  ['spostapedina_18',['spostapedina',['../group__MangiaPedine.html#gafe0e477a00ad566341caaa78d2f2184b',1,'laska.c']]]
 ];

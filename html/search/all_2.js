@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['mallocbase_7',['mallocbase',['../group__CreaScacchiera.html#gaa0569a334978b27ed884172364390625',1,'main.c']]],
-  ['mangia_8',['mangia',['../group__MangiaPedine.html#ga384bdce98cf8d820e2d1e0c34d98ece4',1,'main.c']]],
-  ['mangiapedine_9',['MangiaPedine',['../group__MangiaPedine.html',1,'']]],
-  ['movimento_10',['Movimento',['../group__Movimento.html',1,'']]],
-  ['movimentodue_11',['movimentodue',['../group__Movimento.html#ga1a75d1edb26b5a9d953d345f2fbed691',1,'main.c']]],
-  ['movimentouno_12',['movimentouno',['../group__Movimento.html#ga1b331e1f9081e2b2a6f4f886441617aa',1,'main.c']]]
+  ['mallocbase_8',['mallocbase',['../group__CreaScacchiera.html#gaa0569a334978b27ed884172364390625',1,'laska.c']]],
+  ['mangia_9',['mangia',['../group__MangiaPedine.html#ga0f29adc5d1bd1c9500ed08e4c6f21edd',1,'laska.c']]],
+  ['mangiapedine_10',['MangiaPedine',['../group__MangiaPedine.html',1,'']]],
+  ['movimento_11',['Movimento',['../group__Movimento.html',1,'']]],
+  ['movimentodue_12',['movimentodue',['../group__Movimento.html#ga10a194a871ee2c015343a3c3635736bb',1,'laska.c']]],
+  ['movimentouno_13',['movimentouno',['../group__Movimento.html#ga03e3c3ea0f620303014e51243f2c33de',1,'laska.c']]]
 ];

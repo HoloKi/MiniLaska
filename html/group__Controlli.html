@@ -74,28 +74,56 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gacfc437273f1b61ce3409801aa681ae51"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Controlli.html#gacfc437273f1b61ce3409801aa681ae51">controllodestinazione</a> (<a class="el" href="structtower.html">tower_t</a> **scacchiera, int a, int b, int x, int y, int player)</td></tr>
-<tr class="separator:gacfc437273f1b61ce3409801aa681ae51"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaad8e6ba684c82928f2637f99edb09112"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Controlli.html#gaad8e6ba684c82928f2637f99edb09112">controllogrado</a> (<a class="el" href="structtower.html">tower_t</a> **scacchiera, int a, int b)</td></tr>
-<tr class="separator:gaad8e6ba684c82928f2637f99edb09112"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7d2bfddfecb1e61434897c5c2d494e83"><td class="memItemLeft" align="right" valign="top"><a id="ga7d2bfddfecb1e61434897c5c2d494e83"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>controllo_pedine_presenti</b> (<a class="el" href="structtower.html">tower_t</a> **scacchiera)</td></tr>
+<tr class="memitem:gad7719c611aad5c026c9292e225ee9743"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Controlli.html#gad7719c611aad5c026c9292e225ee9743">controllodestinazione</a> (<a class="el" href="structtower.html">tower_t</a> **scacchiera, int a, int b, int x, int y, int player)</td></tr>
+<tr class="separator:gad7719c611aad5c026c9292e225ee9743"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga69b4af7fe90b1218e1c92301e430a07e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Controlli.html#ga69b4af7fe90b1218e1c92301e430a07e">controllogrado</a> (<a class="el" href="structtower.html">tower_t</a> **scacchiera, int a, int b)</td></tr>
+<tr class="separator:ga69b4af7fe90b1218e1c92301e430a07e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7d2bfddfecb1e61434897c5c2d494e83"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Controlli.html#ga7d2bfddfecb1e61434897c5c2d494e83">controllo_pedine_presenti</a> (<a class="el" href="structtower.html">tower_t</a> **scacchiera)</td></tr>
 <tr class="separator:ga7d2bfddfecb1e61434897c5c2d494e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6c72c18b780416a4f4a64dbf72a85b6e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Controlli.html#ga6c72c18b780416a4f4a64dbf72a85b6e">controllopedina</a> (<a class="el" href="structtower.html">tower_t</a> **scacchiera, int a, int b, int player)</td></tr>
-<tr class="separator:ga6c72c18b780416a4f4a64dbf72a85b6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga692d3eeb8c4bd279ea8eecee895d8b15"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Controlli.html#ga692d3eeb8c4bd279ea8eecee895d8b15">controllopedina</a> (<a class="el" href="structtower.html">tower_t</a> **scacchiera, int a, int b, int player)</td></tr>
+<tr class="separator:ga692d3eeb8c4bd279ea8eecee895d8b15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Funzioni definite al controllo delle posizioni e delle pedine<br  />
 . </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gacfc437273f1b61ce3409801aa681ae51"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gacfc437273f1b61ce3409801aa681ae51">&#9670;&nbsp;</a></span>controllodestinazione()</h2>
+<a id="ga7d2bfddfecb1e61434897c5c2d494e83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7d2bfddfecb1e61434897c5c2d494e83">&#9670;&nbsp;</a></span>controllo_pedine_presenti()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">controllodestinazione </td>
+          <td class="memname">int controllo_pedine_presenti </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structtower.html">tower_t</a> **&#160;</td>
+          <td class="paramname"><em>scacchiera</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>funzione che mi dice se nella scacchiera comandano solo pedine dello stesso giocatore</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">scacchiera</td><td>= puntatore alla scacchiera </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Ritorna <b>da 0 a 2</b>, se il valore ritornato è 1 oppure 2 allora vuol dire che uno dei due giocatori ha vinto </dd></dl>
+<p>conta1 viene incrementato ogni volta che in una casella la pedina più alta appartiene al player1, conta2 invece viene incrementato ogni volta in cui in una casella la pedina più alta appartiene al player2</p>
+<p>caso in cui il player1 non ha pedine che comandano, ovvero non ha pedine presenti in cima ad alcuna torre</p>
+<p>caso in cui il player2 non ha pedine che comandano, ovvero non ha pedine presenti in cima ad alcuna torre</p>
+
+</div>
+</div>
+<a id="gad7719c611aad5c026c9292e225ee9743"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad7719c611aad5c026c9292e225ee9743">&#9670;&nbsp;</a></span>controllodestinazione()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int controllodestinazione </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structtower.html">tower_t</a> **&#160;</td>
           <td class="paramname"><em>scacchiera</em>, </td>
@@ -122,7 +150,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>controllo_pedine_prese
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>u</em>, </td>
+          <td class="paramname"><em>y</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -170,7 +198,6 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>controllo_pedine_prese
 <div class="line">         <span class="keywordflow">return</span> 0;</div>
 <div class="line">     }</div>
 <div class="line"> }</div>
-<div class="line"> </div>
 <div class="line"> <span class="keywordflow">if</span> (player == 1) {</div>
 <div class="line">     <span class="keywordflow">if</span> (a &gt; x) {</div>
 <div class="line">         <span class="keywordflow">return</span> 0;</div>
@@ -179,14 +206,14 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>controllo_pedine_prese
 </div><!-- fragment -->
 </div>
 </div>
-<a id="gaad8e6ba684c82928f2637f99edb09112"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaad8e6ba684c82928f2637f99edb09112">&#9670;&nbsp;</a></span>controllogrado()</h2>
+<a id="ga69b4af7fe90b1218e1c92301e430a07e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga69b4af7fe90b1218e1c92301e430a07e">&#9670;&nbsp;</a></span>controllogrado()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">controllogrado </td>
+          <td class="memname">int controllogrado </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structtower.html">tower_t</a> **&#160;</td>
           <td class="paramname"><em>scacchiera</em>, </td>
@@ -236,14 +263,14 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>controllo_pedine_prese
 </div><!-- fragment -->
 </div>
 </div>
-<a id="ga6c72c18b780416a4f4a64dbf72a85b6e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6c72c18b780416a4f4a64dbf72a85b6e">&#9670;&nbsp;</a></span>controllopedina()</h2>
+<a id="ga692d3eeb8c4bd279ea8eecee895d8b15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga692d3eeb8c4bd279ea8eecee895d8b15">&#9670;&nbsp;</a></span>controllopedina()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">controllopedina </td>
+          <td class="memname">int controllopedina </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structtower.html">tower_t</a> **&#160;</td>
           <td class="paramname"><em>scacchiera</em>, </td>
@@ -273,7 +300,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>controllo_pedine_prese
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Funzione che fa il controllo sulla posizione della pedina. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="group__Controlli.html#gaad8e6ba684c82928f2637f99edb09112">controllogrado()</a> </dd></dl>
+<p>Funzione che fa il controllo sulla posizione della pedina. </p><dl class="section see"><dt>See also</dt><dd><a class="el" href="group__Controlli.html#ga69b4af7fe90b1218e1c92301e430a07e">controllogrado()</a> </dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">scacchiera</td><td>= puntatore a scacchiera </td></tr>
