@@ -84,6 +84,13 @@ int controllodestinazione(tower_t **scacchiera,int a,int b,int x, int y,int play
 int controllogrado(tower_t **scacchiera,int a,int b);
 
 
+/** \fn controllo_pedine_presenti(tower_t** scacchiera)
+ * funzione che mi dice se nella scacchiera comandano solo pedine dello stesso giocatore
+ *
+ * @param scacchiera = puntatore alla scacchiera
+ * @return Ritorna **da 0 a 2**, se il valore ritornato è 1 oppure 2 allora vuol dire che uno dei due giocatori ha vinto
+ *
+ * */
 int controllo_pedine_presenti(tower_t** scacchiera);
 
 
@@ -227,5 +234,11 @@ int movimentouno(tower_t **scacchiera,int a,int b,int x,int y);
 /**@}
  * */
 
-
+/** \fn turno(tower_t** scacchiera, int conta)
+ * Funzione ricorsiva che gestisce i turni dei giocatori ed eventiali vincite
+ *
+ * @param scacchiera = puntatore a scacchiera
+ * @param conta = indica se è il turno del player1 oppure del player2
+ *
+ * */
 int turno(tower_t** scacchiera, int conta);
