@@ -127,6 +127,33 @@ laskaprivate\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\laskaprivate.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\laskaprivate.dir\build
 .PHONY : laskaprivate\fast
 
+laska.obj: laska.c.obj
+
+.PHONY : laska.obj
+
+# target to build an object file
+laska.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\laskaprivate.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\laskaprivate.dir\laska.c.obj
+.PHONY : laska.c.obj
+
+laska.i: laska.c.i
+
+.PHONY : laska.i
+
+# target to preprocess a source file
+laska.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\laskaprivate.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\laskaprivate.dir\laska.c.i
+.PHONY : laska.c.i
+
+laska.s: laska.c.s
+
+.PHONY : laska.s
+
+# target to generate assembly for a file
+laska.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\laskaprivate.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\laskaprivate.dir\laska.c.s
+.PHONY : laska.c.s
+
 main.obj: main.c.obj
 
 .PHONY : main.obj
@@ -163,6 +190,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... laskaprivate
+	@echo ... laska.obj
+	@echo ... laska.i
+	@echo ... laska.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

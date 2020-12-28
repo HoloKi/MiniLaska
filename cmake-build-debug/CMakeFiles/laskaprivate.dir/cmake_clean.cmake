@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/laskaprivate.dir/laska.c.obj"
   "CMakeFiles/laskaprivate.dir/main.c.obj"
   "laskaprivate.exe"
   "laskaprivate.exe.manifest"

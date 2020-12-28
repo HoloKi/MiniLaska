@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Utente/Desktop/laskaprivate/laska.c">
+			<Option target="laskaprivate"/>
+		</Unit>
+		<Unit filename="C:/Users/Utente/Desktop/laskaprivate/laska.h">
+			<Option target="laskaprivate"/>
+		</Unit>
 		<Unit filename="C:/Users/Utente/Desktop/laskaprivate/main.c">
 			<Option target="laskaprivate"/>
 		</Unit>

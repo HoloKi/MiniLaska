@@ -80,17 +80,38 @@ CMakeFiles\laskaprivate.dir\main.c.s: cmake_force
  /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\laskaprivate.dir\main.c.s /c C:\Users\Utente\Desktop\laskaprivate\main.c
 <<
 
+CMakeFiles\laskaprivate.dir\laska.c.obj: CMakeFiles\laskaprivate.dir\flags.make
+CMakeFiles\laskaprivate.dir\laska.c.obj: ..\laska.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Utente\Desktop\laskaprivate\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/laskaprivate.dir/laska.c.obj"
+	C:\PROGRA~2\MICROS~2\2019\ENTERP~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\laskaprivate.dir\laska.c.obj /FdCMakeFiles\laskaprivate.dir\ /FS -c C:\Users\Utente\Desktop\laskaprivate\laska.c
+<<
+
+CMakeFiles\laskaprivate.dir\laska.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/laskaprivate.dir/laska.c.i"
+	C:\PROGRA~2\MICROS~2\2019\ENTERP~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe > CMakeFiles\laskaprivate.dir\laska.c.i @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Utente\Desktop\laskaprivate\laska.c
+<<
+
+CMakeFiles\laskaprivate.dir\laska.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/laskaprivate.dir/laska.c.s"
+	C:\PROGRA~2\MICROS~2\2019\ENTERP~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\laskaprivate.dir\laska.c.s /c C:\Users\Utente\Desktop\laskaprivate\laska.c
+<<
+
 # Object files for target laskaprivate
 laskaprivate_OBJECTS = \
-"CMakeFiles\laskaprivate.dir\main.c.obj"
+"CMakeFiles\laskaprivate.dir\main.c.obj" \
+"CMakeFiles\laskaprivate.dir\laska.c.obj"
 
 # External object files for target laskaprivate
 laskaprivate_EXTERNAL_OBJECTS =
 
 laskaprivate.exe: CMakeFiles\laskaprivate.dir\main.c.obj
+laskaprivate.exe: CMakeFiles\laskaprivate.dir\laska.c.obj
 laskaprivate.exe: CMakeFiles\laskaprivate.dir\build.make
 laskaprivate.exe: CMakeFiles\laskaprivate.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Utente\Desktop\laskaprivate\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable laskaprivate.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Utente\Desktop\laskaprivate\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable laskaprivate.exe"
 	"C:\Program Files\JetBrains\CLion 2020.2.1\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\laskaprivate.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~2\2019\ENTERP~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\laskaprivate.dir\objects1.rsp @<<
  /out:laskaprivate.exe /implib:laskaprivate.lib /pdb:C:\Users\Utente\Desktop\laskaprivate\cmake-build-debug\laskaprivate.pdb /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<
