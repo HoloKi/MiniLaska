@@ -8,24 +8,24 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/Utente/Desktop/laskaprivate/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Khiem/Desktop/laskaprivate/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f C:\Users\Utente\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 all"/>
-					<CompileFile command="nmake /NOLOGO /f C:\Users\Utente\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f C:\Users\Utente\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f C:\Users\Utente\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f C:\Users\Khiem\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 all"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\Khiem\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\Khiem\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\Khiem\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="laskaprivate">
-				<Option output="C:/Users/Utente/Desktop/laskaprivate/cmake-build-debug/laskaprivate.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Utente/Desktop/laskaprivate/cmake-build-debug"/>
+				<Option output="C:/Users/Khiem/Desktop/laskaprivate/cmake-build-debug/laskaprivate.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Khiem/Desktop/laskaprivate/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
-					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.27.29110\ATLMFC\include"/>
-					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.27.29110\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
@@ -34,21 +34,21 @@
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f C:\Users\Utente\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 laskaprivate"/>
-					<CompileFile command="nmake /NOLOGO /f C:\Users\Utente\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f C:\Users\Utente\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f C:\Users\Utente\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f C:\Users\Khiem\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 laskaprivate"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\Khiem\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\Khiem\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\Khiem\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="laskaprivate/fast">
-				<Option output="C:/Users/Utente/Desktop/laskaprivate/cmake-build-debug/laskaprivate.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Utente/Desktop/laskaprivate/cmake-build-debug"/>
+				<Option output="C:/Users/Khiem/Desktop/laskaprivate/cmake-build-debug/laskaprivate.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Khiem/Desktop/laskaprivate/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="msvc8"/>
 				<Compiler>
-					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.27.29110\ATLMFC\include"/>
-					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.27.29110\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\ATLMFC\include"/>
+					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\VC\Tools\MSVC\14.26.28801\include"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
@@ -57,43 +57,43 @@
 					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f C:\Users\Utente\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 laskaprivate/fast"/>
-					<CompileFile command="nmake /NOLOGO /f C:\Users\Utente\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f C:\Users\Utente\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f C:\Users\Utente\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f C:\Users\Khiem\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 laskaprivate/fast"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\Khiem\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\Khiem\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\Khiem\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/Utente/Desktop/laskaprivate/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Khiem/Desktop/laskaprivate/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f C:\Users\Utente\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 edit_cache"/>
-					<CompileFile command="nmake /NOLOGO /f C:\Users\Utente\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f C:\Users\Utente\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f C:\Users\Utente\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f C:\Users\Khiem\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 edit_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\Khiem\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\Khiem\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\Khiem\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/Utente/Desktop/laskaprivate/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Khiem/Desktop/laskaprivate/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f C:\Users\Utente\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="nmake /NOLOGO /f C:\Users\Utente\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f C:\Users\Utente\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f C:\Users\Utente\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<Build command="nmake /NOLOGO /f C:\Users\Khiem\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="nmake /NOLOGO /f C:\Users\Khiem\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="nmake /NOLOGO /f C:\Users\Khiem\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 clean"/>
+					<DistClean command="nmake /NOLOGO /f C:\Users\Khiem\Desktop\laskaprivate\cmake-build-debug\Makefile VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Utente/Desktop/laskaprivate/laska.c">
+		<Unit filename="C:/Users/Khiem/Desktop/laskaprivate/laska.c">
 			<Option target="laskaprivate"/>
 		</Unit>
-		<Unit filename="C:/Users/Utente/Desktop/laskaprivate/laska.h">
+		<Unit filename="C:/Users/Khiem/Desktop/laskaprivate/laska.h">
 			<Option target="laskaprivate"/>
 		</Unit>
-		<Unit filename="C:/Users/Utente/Desktop/laskaprivate/main.c">
+		<Unit filename="C:/Users/Khiem/Desktop/laskaprivate/main.c">
 			<Option target="laskaprivate"/>
 		</Unit>
-		<Unit filename="C:/Users/Utente/Desktop/laskaprivate/CMakeLists.txt">
+		<Unit filename="C:/Users/Khiem/Desktop/laskaprivate/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

@@ -242,3 +242,5 @@ int movimentouno(tower_t **scacchiera,int a,int b,int x,int y);
  *
  * */
 int turno(tower_t** scacchiera, int conta);
+
+void libera(tower_t **scacchiera);

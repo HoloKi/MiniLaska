@@ -1035,3 +1035,26 @@ int turno(tower_t** scacchiera, int conta){
     return 0;
 
 }
+
+/**\defgroup Free
+ * funzione che libera la memoria
+ * @{
+ * */
+
+
+/**\fn libera(tower_t **scacchiera)
+ * @param scacchiera = puntatore a scacchiera
+ *
+ * Funzione che libera la memoria
+ * */
+void libera(tower_t **scacchiera){
+    int i;
+    for(i=0;i<7;i++){
+        free(scacchiera[i]);
+    }
+    free(scacchiera);
+}
+
+/**
+ * @}
+ * */

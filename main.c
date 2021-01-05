@@ -7,7 +7,7 @@ int menu(void){
     printf("Premi il numero desiderato per scegliere un opzione\n");
     printf("1) Come giocare\n");
     printf("2) Giocatore vs Giocatore\n");
-    printf("3) Computer vs Giocatore(da definire)\n");
+
     scanf("%d",&a);
     if(a==1){
         printf("Giocare a Laska è come giocare a dama. A turno ogni giocatore deve spostare una delle sue pedine nelle caselle in avanti poste diagonalmente.\n");
