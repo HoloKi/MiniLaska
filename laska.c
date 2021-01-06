@@ -962,10 +962,12 @@ int turno(tower_t** scacchiera, int conta){
              *
              * @code{.c}
              * else{
-             * printf("\n------DEBUG-------------------------------------------------------\n");
-             * printf("player 2 inserisci le coordinate\n");
+             * conta % 2 == 0) {
+             * printf("\n------------------------------------------------------------------------------------------------------\n");
+             * printf("player 2 inserisci le coordinate della pedina che desideri muovere\n");
              * scanf("%d", &a);
              * scanf("%d", &b);
+             * printf("player 2 inserisci le coordinate dove desideri che la pedina si muova\n");
              * scanf("%d", &x);
              * scanf("%d", &y);
              * printf("Pedina (%d,%d) nella casella (%d,%d)\n", a, b, x, y);
@@ -980,10 +982,11 @@ int turno(tower_t** scacchiera, int conta){
              *
              * */
         if (conta % 2 == 0) {
-            printf("\n------DEBUG-------------------------------------------------------\n");
-            printf("player 2 inserisci le coordinate\n");
+            printf("\n------------------------------------------------------------------------------------------------------\n");
+            printf("player 2 inserisci le coordinate della pedina che desideri muovere\n");
             scanf("%d", &a);
             scanf("%d", &b);
+            printf("player 2 inserisci le coordinate dove desideri che la pedina si muova\n");
             scanf("%d", &x);
             scanf("%d", &y);
             printf("Pedina (%d,%d) nella casella (%d,%d)\n", a, b, x, y);
@@ -1000,10 +1003,11 @@ int turno(tower_t** scacchiera, int conta){
              *
              * @code{.c}
              * else {
-             * printf("\n------DEBUG-------------------------------------------------------\n");
-             * printf("player 1 inserisci le coordinate\n");
+             * printf("\n------------------------------------------------------------------------------------------------------\n");
+             * printf("player 1 inserisci le coordinate della pedina che desideri muovere\n");
              * scanf("%d", &a);
              * scanf("%d", &b);
+             * printf("player 1 inserisci le coordinate dove desideri che la pedina si muova\n");
              * scanf("%d", &x);
              * scanf("%d", &y);
              * printf("Pedina (%d,%d) nella casella (%d,%d)\n", a, b, x, y);
@@ -1017,10 +1021,11 @@ int turno(tower_t** scacchiera, int conta){
              * @endcode
              * */
         } else {
-            printf("\n------DEBUG-------------------------------------------------------\n");
-            printf("player 1 inserisci le coordinate\n");
+            printf("\n------------------------------------------------------------------------------------------------------\n");
+            printf("player 1 inserisci le coordinate della pedina che desideri muovere\n");
             scanf("%d", &a);
             scanf("%d", &b);
+            printf("player 1 inserisci le coordinate dove desideri che la pedina si muova\n");
             scanf("%d", &x);
             scanf("%d", &y);
             printf("Pedina (%d,%d) nella casella (%d,%d)\n", a, b, x, y);
