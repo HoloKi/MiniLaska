@@ -1040,10 +1040,10 @@ int turno(tower_t** scacchiera, int conta){
     }
     if(controllo_pedine_presenti(scacchiera) == 1) {
         printf("PLAYER 2 HA VINTO !!!");
-        free(scacchiera);
+        libera(scacchiera);
     }else{
         printf("PLAYER 1 HA VINTO !!!");
-        free(scacchiera);
+        libera(scacchiera);
     }
     return 0;
 
