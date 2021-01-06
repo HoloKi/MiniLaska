@@ -243,4 +243,8 @@ int movimentouno(tower_t **scacchiera,int a,int b,int x,int y);
  * */
 int turno(tower_t** scacchiera, int conta);
 
+/**\fn libera(tower_t **scacchiera)
+ * @param scacchiera = puntatore a scacchiera
+ * Funzione che libera la memoria
+ * */
 void libera(tower_t **scacchiera);

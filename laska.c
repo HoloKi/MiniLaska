@@ -88,6 +88,7 @@ tower_t **mallocbase(int a,int b){
  * @param b = posizione y di (x,y) dove è presente la pedina
  * @param x = posizione x di (x,y) dove sposto la pedina
  * @param y = posizione y di (x,y) dove sposto la pedina
+ * @param player = giocatore
  * @return **0** nel caso non fosse possibile un'azione, **1** nel caso fosse possibile l'azione.
  * */
 int controllodestinazione(tower_t **scacchiera,int a,int b,int x, int y,int player){ /*per controllare se un azione è possibile*/
@@ -942,24 +943,25 @@ int movimentouno(tower_t **scacchiera,int a,int b,int x,int y) {
     }
     return 1;
 }
-/**@}
- * */
+
 
 
 /** \fn turno(tower_t** scacchiera, int conta)
  * Funzione ricorsiva che gestisce i turni dei giocatori ed eventiali vincite
- *
  * @param scacchiera = puntatore a scacchiera
  * @param conta = indica se è il turno del player1 oppure del player2
- *
  * */
 int turno(tower_t** scacchiera, int conta){
     int a, b, x, y;
     int controllo;
     while(controllo_pedine_presenti(scacchiera) == 0) {
-            /** **caso in cui è il turno del player2, **
+            /** **caso in cui è il turno del player2**
+             * @see movimentodue()
+             * @see turno()
+             * @see printbase()
+             *
              * @code{.c}
-             * else {
+             * else{
              * printf("\n------DEBUG-------------------------------------------------------\n");
              * printf("player 2 inserisci le coordinate\n");
              * scanf("%d", &a);
@@ -967,16 +969,16 @@ int turno(tower_t** scacchiera, int conta){
              * scanf("%d", &x);
              * scanf("%d", &y);
              * printf("Pedina (%d,%d) nella casella (%d,%d)\n", a, b, x, y);
-             * controllo = movimentouno(scacchiera, a, b, x, y);
+             * controllo = movimentodue(scacchiera, a, b, x, y);
              * if (controllo == 0)
-             * turno(scacchiera, conta);
+             *      turno(scacchiera, conta);
              * else
-             * printbase(scacchiera);
+             *      printbase(scacchiera);
              * conta ++;
              * }
-             * @encode
+             * @endcode
              *
-             * **/
+             * */
         if (conta % 2 == 0) {
             printf("\n------DEBUG-------------------------------------------------------\n");
             printf("player 2 inserisci le coordinate\n");
@@ -991,7 +993,11 @@ int turno(tower_t** scacchiera, int conta){
             else
                 printbase(scacchiera);
             conta++;
-            /** **caso in cui è il turno del player1, **
+            /** **caso in cui è il turno del player1**
+             * @see movimentouno()
+             * @see turno()
+             * @see printbase()
+             *
              * @code{.c}
              * else {
              * printf("\n------DEBUG-------------------------------------------------------\n");
@@ -1003,14 +1009,13 @@ int turno(tower_t** scacchiera, int conta){
              * printf("Pedina (%d,%d) nella casella (%d,%d)\n", a, b, x, y);
              * controllo = movimentouno(scacchiera, a, b, x, y);
              * if (controllo == 0)
-             * turno(scacchiera, conta);
+             *      turno(scacchiera, conta);
              * else
-             * printbase(scacchiera);
+             *      printbase(scacchiera);
              * conta ++;
              * }
-             * @encode
-             *
-             * **/
+             * @endcode
+             * */
         } else {
             printf("\n------DEBUG-------------------------------------------------------\n");
             printf("player 1 inserisci le coordinate\n");
@@ -1028,23 +1033,28 @@ int turno(tower_t** scacchiera, int conta){
         }
 
     }
-    if(controllo_pedine_presenti(scacchiera) == 1)
+    if(controllo_pedine_presenti(scacchiera) == 1) {
         printf("PLAYER 2 HA VINTO !!!");
-    else
+        free(scacchiera);
+    }else{
         printf("PLAYER 1 HA VINTO !!!");
+        free(scacchiera);
+    }
     return 0;
 
 }
 
-/**\defgroup Free
+/**@}
+ * */
+
+
+/**\defgroup LiberaMemoria
  * funzione che libera la memoria
  * @{
  * */
 
-
 /**\fn libera(tower_t **scacchiera)
  * @param scacchiera = puntatore a scacchiera
- *
  * Funzione che libera la memoria
  * */
 void libera(tower_t **scacchiera){

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['riempi_17',['riempi',['../group__CreaScacchiera.html#ga5ff6500a528b4775974b027e9e153848',1,'laska.c']]]
+  ['print_17',['Print',['../group__print.html',1,'']]],
+  ['printbase_18',['printbase',['../group__print.html#ga6600820ea21ce274685e1fd4b4b2983c',1,'laska.c']]]
 ];

@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['mallocbase_27',['mallocbase',['../group__CreaScacchiera.html#gaa0569a334978b27ed884172364390625',1,'laska.c']]],
-  ['mangia_28',['mangia',['../group__MangiaPedine.html#ga0f29adc5d1bd1c9500ed08e4c6f21edd',1,'laska.c']]],
-  ['movimentodue_29',['movimentodue',['../group__Movimento.html#ga10a194a871ee2c015343a3c3635736bb',1,'laska.c']]],
-  ['movimentouno_30',['movimentouno',['../group__Movimento.html#ga03e3c3ea0f620303014e51243f2c33de',1,'laska.c']]]
+  ['libera_30',['libera',['../group__LiberaMemoria.html#ga2ced6cdd3f09aa1631f9c14461664d2d',1,'libera(tower_t **scacchiera):&#160;laska.c'],['../group__LiberaMemoria.html#ga2ced6cdd3f09aa1631f9c14461664d2d',1,'libera(tower_t **scacchiera):&#160;laska.c']]]
 ];

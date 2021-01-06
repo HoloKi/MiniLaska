@@ -11,6 +11,8 @@ Funzioni per definire il movimento delle pedine.
 int \mbox{\hyperlink{group__Movimento_ga10a194a871ee2c015343a3c3635736bb}{movimentodue}} (\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$scacchiera, int a, int b, int x, int y)
 \item 
 int \mbox{\hyperlink{group__Movimento_ga03e3c3ea0f620303014e51243f2c33de}{movimentouno}} (\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$scacchiera, int a, int b, int x, int y)
+\item 
+int \mbox{\hyperlink{group__Movimento_ga9f5c27ad585198b2e8c0f191a0de7485}{turno}} (\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$scacchiera, int conta)
 \end{DoxyCompactItemize}
 
 
@@ -156,3 +158,68 @@ Funzione che sposta la pedina uno, simile al movimentodue \begin{DoxySeeAlso}{Se
 \begin{DoxyReturn}{Returns}
 1 se va a buon fine, 0 se non è possibile efettuare la mossa 
 \end{DoxyReturn}
+\mbox{\Hypertarget{group__Movimento_ga9f5c27ad585198b2e8c0f191a0de7485}\label{group__Movimento_ga9f5c27ad585198b2e8c0f191a0de7485}} 
+\index{Movimento@{Movimento}!turno@{turno}}
+\index{turno@{turno}!Movimento@{Movimento}}
+\doxysubsubsection{\texorpdfstring{turno()}{turno()}}
+{\footnotesize\ttfamily turno (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$}]{scacchiera,  }\item[{int}]{conta }\end{DoxyParamCaption})}
+
+Funzione ricorsiva che gestisce i turni dei giocatori ed eventiali vincite 
+\begin{DoxyParams}{Parameters}
+{\em scacchiera} & = puntatore a scacchiera \\
+\hline
+{\em conta} & = indica se è il turno del player1 oppure del player2 \\
+\hline
+\end{DoxyParams}
+{\bfseries{caso in cui è il turno del player2}} \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__Movimento_ga10a194a871ee2c015343a3c3635736bb}{movimentodue()}} 
+
+\mbox{\hyperlink{group__Movimento_ga9f5c27ad585198b2e8c0f191a0de7485}{turno()}} 
+
+\mbox{\hyperlink{group__print_ga6600820ea21ce274685e1fd4b4b2983c}{printbase()}}
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"\(\backslash\)n-\/-\/-\/-\/-\/-\/DEBUG-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"});}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"player 2 inserisci le coordinate\(\backslash\)n"});}
+\DoxyCodeLine{scanf(\textcolor{stringliteral}{"\%d"}, \&a);}
+\DoxyCodeLine{scanf(\textcolor{stringliteral}{"\%d"}, \&b);}
+\DoxyCodeLine{scanf(\textcolor{stringliteral}{"\%d"}, \&x);}
+\DoxyCodeLine{scanf(\textcolor{stringliteral}{"\%d"}, \&y);}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"Pedina (\%d,\%d) nella casella (\%d,\%d)\(\backslash\)n"}, a, b, x, y);}
+\DoxyCodeLine{controllo = \mbox{\hyperlink{group__Movimento_ga10a194a871ee2c015343a3c3635736bb}{movimentodue}}(scacchiera, a, b, x, y);}
+\DoxyCodeLine{\textcolor{keywordflow}{if} (controllo == 0)}
+\DoxyCodeLine{     \mbox{\hyperlink{group__Movimento_ga9f5c27ad585198b2e8c0f191a0de7485}{turno}}(scacchiera, conta);}
+\DoxyCodeLine{\textcolor{keywordflow}{else}}
+\DoxyCodeLine{     \mbox{\hyperlink{group__print_ga6600820ea21ce274685e1fd4b4b2983c}{printbase}}(scacchiera);}
+\DoxyCodeLine{conta ++;}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+{\bfseries{caso in cui è il turno del player1}} \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__Movimento_ga03e3c3ea0f620303014e51243f2c33de}{movimentouno()}} 
+
+\mbox{\hyperlink{group__Movimento_ga9f5c27ad585198b2e8c0f191a0de7485}{turno()}} 
+
+\mbox{\hyperlink{group__print_ga6600820ea21ce274685e1fd4b4b2983c}{printbase()}}
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"\(\backslash\)n-\/-\/-\/-\/-\/-\/DEBUG-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"});}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"player 1 inserisci le coordinate\(\backslash\)n"});}
+\DoxyCodeLine{scanf(\textcolor{stringliteral}{"\%d"}, \&a);}
+\DoxyCodeLine{scanf(\textcolor{stringliteral}{"\%d"}, \&b);}
+\DoxyCodeLine{scanf(\textcolor{stringliteral}{"\%d"}, \&x);}
+\DoxyCodeLine{scanf(\textcolor{stringliteral}{"\%d"}, \&y);}
+\DoxyCodeLine{printf(\textcolor{stringliteral}{"Pedina (\%d,\%d) nella casella (\%d,\%d)\(\backslash\)n"}, a, b, x, y);}
+\DoxyCodeLine{controllo = \mbox{\hyperlink{group__Movimento_ga03e3c3ea0f620303014e51243f2c33de}{movimentouno}}(scacchiera, a, b, x, y);}
+\DoxyCodeLine{\textcolor{keywordflow}{if} (controllo == 0)}
+\DoxyCodeLine{     \mbox{\hyperlink{group__Movimento_ga9f5c27ad585198b2e8c0f191a0de7485}{turno}}(scacchiera, conta);}
+\DoxyCodeLine{\textcolor{keywordflow}{else}}
+\DoxyCodeLine{     \mbox{\hyperlink{group__print_ga6600820ea21ce274685e1fd4b4b2983c}{printbase}}(scacchiera);}
+\DoxyCodeLine{conta ++;}
+\DoxyCodeLine{\}}
+\end{DoxyCode}

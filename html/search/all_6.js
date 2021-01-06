@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['spostapedina_18',['spostapedina',['../group__MangiaPedine.html#gafe0e477a00ad566341caaa78d2f2184b',1,'laska.c']]]
+  ['riempi_19',['riempi',['../group__CreaScacchiera.html#ga5ff6500a528b4775974b027e9e153848',1,'laska.c']]]
 ];
