@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Khiem/Desktop/laskaprivate/laska.c
+stdio.h
+-
+stdlib.h
+-
+laska.h
+C:/Users/Khiem/Desktop/laskaprivate/laska.h
+
+C:/Users/Khiem/Desktop/laskaprivate/laska.h
+stddef.h
+-
+

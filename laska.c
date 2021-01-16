@@ -63,7 +63,7 @@ void riempi(tower_t **scacchiera,int size){
 tower_t **mallocbase(int a,int b){
     tower_t **base;
     int i;
-    base = (tower_t **)malloc((b*a)*sizeof(tower_t *));
+    base = (tower_t **)malloc(a*sizeof(tower_t *));
     for(i=0;i<b;i++){
         base[i] = (tower_t *)malloc(b*sizeof(tower_t));
     }
