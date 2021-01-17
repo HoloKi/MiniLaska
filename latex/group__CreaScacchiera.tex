@@ -1,0 +1,56 @@
+\hypertarget{group__CreaScacchiera}{}\doxysection{Crea\+Scacchiera}
+\label{group__CreaScacchiera}\index{CreaScacchiera@{CreaScacchiera}}
+
+
+Funzioni che creano la scacchiera base.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__CreaScacchiera_ga5ff6500a528b4775974b027e9e153848}{riempi}} (\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$scacchiera, int size)
+\item 
+\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$ \mbox{\hyperlink{group__CreaScacchiera_gaa0569a334978b27ed884172364390625}{mallocbase}} (int a, int b)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Funzioni che creano la scacchiera base. 
+
+F\+U\+N\+Z\+I\+O\+NE D\+EL G\+I\+O\+CO~\newline
+Ad ogni pedina viene assegnato un numero che indica\+:~\newline
+1 = giocatore 1~\newline
+2 = giocatore 2~\newline
+3 = ufficiale (giocatore1)~\newline
+4 = ufficiale (giocatore2)~\newline
+La pedina più alta visualizzata indica a di quale giocatore è l\textquotesingle{}intera torre.~\newline
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__CreaScacchiera_gaa0569a334978b27ed884172364390625}\label{group__CreaScacchiera_gaa0569a334978b27ed884172364390625}} 
+\index{CreaScacchiera@{CreaScacchiera}!mallocbase@{mallocbase}}
+\index{mallocbase@{mallocbase}!CreaScacchiera@{CreaScacchiera}}
+\doxysubsubsection{\texorpdfstring{mallocbase()}{mallocbase()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$ mallocbase (\begin{DoxyParamCaption}\item[{int}]{a,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & = dimensione della prima malloc (7 poichè scacchiera 7$\ast$7) \\
+\hline
+{\em b} & = seconda malloc (7 scacchiera 7$\ast$7) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__CreaScacchiera_ga5ff6500a528b4775974b027e9e153848}\label{group__CreaScacchiera_ga5ff6500a528b4775974b027e9e153848}} 
+\index{CreaScacchiera@{CreaScacchiera}!riempi@{riempi}}
+\index{riempi@{riempi}!CreaScacchiera@{CreaScacchiera}}
+\doxysubsubsection{\texorpdfstring{riempi()}{riempi()}}
+{\footnotesize\ttfamily void riempi (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$}]{scacchiera,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+Funzione che mi posiziona e riempie le pedine iniziali~\newline
+
+\begin{DoxyParams}{Parameters}
+{\em scacchiera} & = puntatore a scacchiera \\
+\hline
+{\em size} & = dimensione x$\ast$x della scacchiera \\
+\hline
+\end{DoxyParams}

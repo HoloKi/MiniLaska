@@ -1,0 +1,248 @@
+\hypertarget{group__MangiaPedine}{}\doxysection{Mangia\+Pedine}
+\label{group__MangiaPedine}\index{MangiaPedine@{MangiaPedine}}
+
+
+Funzioni definite per mangiare la pedina e/o obbligo.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__MangiaPedine_gafe0e477a00ad566341caaa78d2f2184b}{spostapedina}} (\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$scacchiera, int a, int b, int x, int y)
+\item 
+int \mbox{\hyperlink{group__MangiaPedine_gab771a0fd91d5b58f55bf92ef61e7bb83}{controllamangio}} (\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$scacchiera, int a, int b, int x, int y, int player)
+\item 
+void \mbox{\hyperlink{group__MangiaPedine_ga0f29adc5d1bd1c9500ed08e4c6f21edd}{mangia}} (\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$scacchiera, int a, int b, int x, int y, int grado)
+\item 
+int \mbox{\hyperlink{group__MangiaPedine_gab216490cc4273357fc19c55f9768ff0e}{angolopedine}} (\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$scacchiera, int a, int b, int player)
+\item 
+int \mbox{\hyperlink{group__MangiaPedine_ga05cdb52671f313436a4d8523daacebba}{obbligomangiare}} (\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$scacchiera, int player)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Funzioni definite per mangiare la pedina e/o obbligo. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__MangiaPedine_gab216490cc4273357fc19c55f9768ff0e}\label{group__MangiaPedine_gab216490cc4273357fc19c55f9768ff0e}} 
+\index{MangiaPedine@{MangiaPedine}!angolopedine@{angolopedine}}
+\index{angolopedine@{angolopedine}!MangiaPedine@{MangiaPedine}}
+\doxysubsubsection{\texorpdfstring{angolopedine()}{angolopedine()}}
+{\footnotesize\ttfamily int angolopedine (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$}]{scacchiera,  }\item[{int}]{a,  }\item[{int}]{b,  }\item[{int}]{player }\end{DoxyParamCaption})}
+
+Funzione che controlla le posizioni dove potrebbe mangiare la pedina \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__Controlli_gad7719c611aad5c026c9292e225ee9743}{controllodestinazione()}} 
+
+controllomangio()
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em scacchiera} & = puntatore a scacchiera \\
+\hline
+{\em a} & = x di (x,y) dove è presente la pedina \\
+\hline
+{\em b} & = y di (x,y) dove è presente la pedina \\
+\hline
+{\em player} & = giocatore \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 se non può mangiare alcuna pedina, 1 se può mangiare una pedina 
+\end{DoxyReturn}
+{\bfseries{Controllo nel caso la pedina sia un ufficiale e possa mangiare sia avanti che dietro}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \textcolor{keywordflow}{if}(player==3 || player ==4) \{}
+\DoxyCodeLine{     controllo1 = \mbox{\hyperlink{group__Controlli_gad7719c611aad5c026c9292e225ee9743}{controllodestinazione}}(scacchiera,a,b,a-\/2,b-\/2,player);}
+\DoxyCodeLine{     controllo2 = \mbox{\hyperlink{group__Controlli_gad7719c611aad5c026c9292e225ee9743}{controllodestinazione}}(scacchiera,a,b,a-\/2,b+2,player);}
+\DoxyCodeLine{     controllo3 = \mbox{\hyperlink{group__Controlli_gad7719c611aad5c026c9292e225ee9743}{controllodestinazione}}(scacchiera,a,b,a+2,b-\/2,player);}
+\DoxyCodeLine{     controllo4 = \mbox{\hyperlink{group__Controlli_gad7719c611aad5c026c9292e225ee9743}{controllodestinazione}}(scacchiera,a,b,a+2,b+2,player);}
+\DoxyCodeLine{     angolo1 = \mbox{\hyperlink{group__MangiaPedine_gab771a0fd91d5b58f55bf92ef61e7bb83}{controllamangio}}(scacchiera,a,b,a-\/2,b-\/2,player);}
+\DoxyCodeLine{     angolo2 = \mbox{\hyperlink{group__MangiaPedine_gab771a0fd91d5b58f55bf92ef61e7bb83}{controllamangio}}(scacchiera,a,b,a-\/2,b+2,player);}
+\DoxyCodeLine{     angolo3 = \mbox{\hyperlink{group__MangiaPedine_gab771a0fd91d5b58f55bf92ef61e7bb83}{controllamangio}}(scacchiera,a,b,a+2,b-\/2,player);}
+\DoxyCodeLine{     angolo4 = \mbox{\hyperlink{group__MangiaPedine_gab771a0fd91d5b58f55bf92ef61e7bb83}{controllamangio}}(scacchiera,a,b,a+2,b+2,player);}
+\DoxyCodeLine{     \textcolor{keywordflow}{if}((controllo1!=0 \&\& angolo1==1 )|| (controllo2!=0 \&\& angolo2==1) || (controllo3!=0\&\& angolo3==1) || (controllo4!=0 \&\& angolo4 ==1))\{}
+\DoxyCodeLine{         \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{     \}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+{\bfseries{Giocatore 2, simile è il codice per il giocatore 1}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}(player==2)\{}
+\DoxyCodeLine{     controllo1 = \mbox{\hyperlink{group__Controlli_gad7719c611aad5c026c9292e225ee9743}{controllodestinazione}}(scacchiera,a,b,a-\/2,b-\/2,2);}
+\DoxyCodeLine{     controllo2 = \mbox{\hyperlink{group__Controlli_gad7719c611aad5c026c9292e225ee9743}{controllodestinazione}}(scacchiera,a,b,a-\/2,b+2,2);}
+\DoxyCodeLine{     angolo1 = \mbox{\hyperlink{group__MangiaPedine_gab771a0fd91d5b58f55bf92ef61e7bb83}{controllamangio}}(scacchiera,a,b,a-\/2,b-\/2,2);}
+\DoxyCodeLine{     angolo2 = \mbox{\hyperlink{group__MangiaPedine_gab771a0fd91d5b58f55bf92ef61e7bb83}{controllamangio}}(scacchiera,a,b,a-\/2,b+2,2);}
+\DoxyCodeLine{     \textcolor{keywordflow}{if}((controllo1!=0 \&\& angolo1==1) || (controllo2!=0 \&\& angolo2==1))\{}
+\DoxyCodeLine{         \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{     \}}
+\DoxyCodeLine{ \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__MangiaPedine_gab771a0fd91d5b58f55bf92ef61e7bb83}\label{group__MangiaPedine_gab771a0fd91d5b58f55bf92ef61e7bb83}} 
+\index{MangiaPedine@{MangiaPedine}!controllamangio@{controllamangio}}
+\index{controllamangio@{controllamangio}!MangiaPedine@{MangiaPedine}}
+\doxysubsubsection{\texorpdfstring{controllamangio()}{controllamangio()}}
+{\footnotesize\ttfamily int controllamangio (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$}]{scacchiera,  }\item[{int}]{a,  }\item[{int}]{b,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{player }\end{DoxyParamCaption})}
+
+Funzione che controlla le possibili caselle da mangiare 
+\begin{DoxyParams}{Parameters}
+{\em scacchiera} & = puntatore a scacchiera \\
+\hline
+{\em a} & = x di (x,y) dove è presente la pedina \\
+\hline
+{\em b} & = y di (x,y) dove è presente la pedina \\
+\hline
+{\em x} & = x di (x,y) dove si sposterà la pedina \\
+\hline
+{\em y} & = y di (x,y) dove si sposterà la pedina \\
+\hline
+{\em player} & = indica il giocatore \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 se può mangiare 0 se non può 
+\end{DoxyReturn}
+{\bfseries{Controllo di non saltare una casella vuota o una mia stessa pedina.}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if} (giocatore == 0) \{}
+\DoxyCodeLine{\textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\textcolor{keywordflow}{if} (giocatore -\/ player == 0 || giocatore -\/ player == 2) \{}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__MangiaPedine_ga0f29adc5d1bd1c9500ed08e4c6f21edd}\label{group__MangiaPedine_ga0f29adc5d1bd1c9500ed08e4c6f21edd}} 
+\index{MangiaPedine@{MangiaPedine}!mangia@{mangia}}
+\index{mangia@{mangia}!MangiaPedine@{MangiaPedine}}
+\doxysubsubsection{\texorpdfstring{mangia()}{mangia()}}
+{\footnotesize\ttfamily void mangia (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$}]{scacchiera,  }\item[{int}]{a,  }\item[{int}]{b,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{grado }\end{DoxyParamCaption})}
+
+Funzione che mangia la pedina e scambia i valori 
+\begin{DoxyParams}{Parameters}
+{\em scacchiera} & = puntatore a scacchiera \\
+\hline
+{\em a} & = x di (x,y) dove è presente la pedina \\
+\hline
+{\em b} & = y di (x,y) dove è presente la pedina \\
+\hline
+{\em x} & = x di (x,y) dove si sposterà la pedina \\
+\hline
+{\em y} & = y di (x,y) dove si sposterà la pedina \\
+\hline
+{\em grado} & = grado maggiore della pedina che mangia \\
+\hline
+\end{DoxyParams}
+{\bfseries{Controllo nelle posizioni oobliquie di 1 blocco}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}(a-\/x>0 \&\& b-\/y<0) \{}
+\DoxyCodeLine{     x1= a-\/1;}
+\DoxyCodeLine{     x2 = b+1;}
+\DoxyCodeLine{\}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{    \textcolor{keywordflow}{if}(a-\/x>0 \&\& b-\/y>0) \{}
+\DoxyCodeLine{        x1 = a -\/ 1;}
+\DoxyCodeLine{        x2 = b -\/ 1;}
+\DoxyCodeLine{    \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{        \textcolor{keywordflow}{if}(a-\/x<0 \&\& b-\/y<0)\{}
+\DoxyCodeLine{            x1= a + 1;}
+\DoxyCodeLine{            x2 = b + 1;}
+\DoxyCodeLine{        \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{            x1 = a + 1;}
+\DoxyCodeLine{            x2 = b -\/ 1;}
+\DoxyCodeLine{        \}}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+{\bfseries{Controllo l\textquotesingle{}altezza della pedina che mangio}}~\newline
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__Controlli_ga69b4af7fe90b1218e1c92301e430a07e}{controllogrado()}}
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{gradox1 = \mbox{\hyperlink{group__Controlli_ga69b4af7fe90b1218e1c92301e430a07e}{controllogrado}}(scacchiera,x1,x2);}
+\end{DoxyCode}
+
+
+{\bfseries{Caso in cui la pedina che sto mangiando sia alto 3}}~\newline
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__MangiaPedine_gafe0e477a00ad566341caaa78d2f2184b}{spostapedina()}}
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}(grado==2)\{}
+\DoxyCodeLine{     scacchiera[a][b].composition[0]=scacchiera[x1][x2].composition[gradox1];}
+\DoxyCodeLine{     scacchiera[x1][x2].composition[gradox1]=0;}
+\DoxyCodeLine{     \mbox{\hyperlink{group__MangiaPedine_gafe0e477a00ad566341caaa78d2f2184b}{spostapedina}}(scacchiera,a,b,x,y);}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+{\bfseries{Caso in cui la pedina che sto mangiando sia alto 2}}~\newline
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__MangiaPedine_gafe0e477a00ad566341caaa78d2f2184b}{spostapedina()}}
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}(grado==1)\{}
+\DoxyCodeLine{     scacchiera[a][b].composition[2]=scacchiera[a][b].composition[1];}
+\DoxyCodeLine{     scacchiera[a][b].composition[1]=scacchiera[a][b].composition[0];}
+\DoxyCodeLine{     scacchiera[a][b].composition[0]=scacchiera[x1][x2].composition[gradox1];}
+\DoxyCodeLine{     scacchiera[x1][x2].composition[gradox1]=0;}
+\DoxyCodeLine{     \mbox{\hyperlink{group__MangiaPedine_gafe0e477a00ad566341caaa78d2f2184b}{spostapedina}}(scacchiera,a,b,x,y);}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+{\bfseries{Caso in cui mangio solamente una pedina}} \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__MangiaPedine_gafe0e477a00ad566341caaa78d2f2184b}{spostapedina()}}
+\end{DoxySeeAlso}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{scacchiera[a][b].composition[1]=scacchiera[a][b].composition[0];}
+\DoxyCodeLine{scacchiera[a][b].composition[0]=scacchiera[x1][x2].composition[gradox1];}
+\DoxyCodeLine{scacchiera[x1][x2].composition[gradox1]=0;}
+\DoxyCodeLine{\mbox{\hyperlink{group__MangiaPedine_gafe0e477a00ad566341caaa78d2f2184b}{spostapedina}}(scacchiera,a,b,x,y);}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__MangiaPedine_ga05cdb52671f313436a4d8523daacebba}\label{group__MangiaPedine_ga05cdb52671f313436a4d8523daacebba}} 
+\index{MangiaPedine@{MangiaPedine}!obbligomangiare@{obbligomangiare}}
+\index{obbligomangiare@{obbligomangiare}!MangiaPedine@{MangiaPedine}}
+\doxysubsubsection{\texorpdfstring{obbligomangiare()}{obbligomangiare()}}
+{\footnotesize\ttfamily int obbligomangiare (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$}]{scacchiera,  }\item[{int}]{player }\end{DoxyParamCaption})}
+
+Funzione che controlla ogni signola pedina di un giocatore per vedere se può mangiare o no una pedina 
+\begin{DoxyParams}{Parameters}
+{\em scacchiera} & = puntatore alla scacchiera \\
+\hline
+{\em player} & = giocatore \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 se può mangiare 0 nel caso non debba mangiare 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__MangiaPedine_gafe0e477a00ad566341caaa78d2f2184b}\label{group__MangiaPedine_gafe0e477a00ad566341caaa78d2f2184b}} 
+\index{MangiaPedine@{MangiaPedine}!spostapedina@{spostapedina}}
+\index{spostapedina@{spostapedina}!MangiaPedine@{MangiaPedine}}
+\doxysubsubsection{\texorpdfstring{spostapedina()}{spostapedina()}}
+{\footnotesize\ttfamily void spostapedina (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$}]{scacchiera,  }\item[{int}]{a,  }\item[{int}]{b,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+funzione che sposta le pedine nel caso dello spostamento di una sola casella vuota 
+\begin{DoxyParams}{Parameters}
+{\em scacchiera} & = puntatore a scacchiera \\
+\hline
+{\em a} & = x di (x,y) dove è presente la pedina \\
+\hline
+{\em b} & = y di (x,y) dove è presente la pedina \\
+\hline
+{\em x} & = x di (x,y) dove si sposterà la pedina \\
+\hline
+{\em y} & = y di (x,y) dove si sposterà la pedina \\
+\hline
+\end{DoxyParams}

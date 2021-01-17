@@ -1,0 +1,258 @@
+\hypertarget{group__Controlli}{}\doxysection{Controlli}
+\label{group__Controlli}\index{Controlli@{Controlli}}
+
+
+Funzioni definite al controllo delle posizioni e delle pedine~\newline
+.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{group__Controlli_gad7719c611aad5c026c9292e225ee9743}{controllodestinazione}} (\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$scacchiera, int a, int b, int x, int y, int player)
+\item 
+int \mbox{\hyperlink{group__Controlli_ga69b4af7fe90b1218e1c92301e430a07e}{controllogrado}} (\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$scacchiera, int a, int b)
+\item 
+int \mbox{\hyperlink{group__Controlli_ga7d2bfddfecb1e61434897c5c2d494e83}{controllo\+\_\+pedine\+\_\+presenti}} (\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$scacchiera)
+\item 
+int \mbox{\hyperlink{group__Controlli_ga692d3eeb8c4bd279ea8eecee895d8b15}{controllopedina}} (\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$scacchiera, int a, int b, int player)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Funzioni definite al controllo delle posizioni e delle pedine~\newline
+. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__Controlli_ga7d2bfddfecb1e61434897c5c2d494e83}\label{group__Controlli_ga7d2bfddfecb1e61434897c5c2d494e83}} 
+\index{Controlli@{Controlli}!controllo\_pedine\_presenti@{controllo\_pedine\_presenti}}
+\index{controllo\_pedine\_presenti@{controllo\_pedine\_presenti}!Controlli@{Controlli}}
+\doxysubsubsection{\texorpdfstring{controllo\_pedine\_presenti()}{controllo\_pedine\_presenti()}}
+{\footnotesize\ttfamily int controllo\+\_\+pedine\+\_\+presenti (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$}]{scacchiera }\end{DoxyParamCaption})}
+
+funzione che mi dice se nella scacchiera comandano solo pedine dello stesso giocatore
+
+
+\begin{DoxyParams}{Parameters}
+{\em scacchiera} & = puntatore alla scacchiera \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ritorna {\bfseries{da 0 a 2}}, se il valore ritornato è 1 oppure 2 allora vuol dire che uno dei due giocatori ha vinto 
+\end{DoxyReturn}
+conta1 viene incrementato ogni volta che in una casella la pedina più alta appartiene al player1, conta2 invece viene incrementato ogni volta in cui in una casella la pedina più alta appartiene al player2
+
+caso in cui il player1 non ha pedine che comandano, ovvero non ha pedine presenti in cima ad alcuna torre
+
+caso in cui il player2 non ha pedine che comandano, ovvero non ha pedine presenti in cima ad alcuna torre\mbox{\Hypertarget{group__Controlli_gad7719c611aad5c026c9292e225ee9743}\label{group__Controlli_gad7719c611aad5c026c9292e225ee9743}} 
+\index{Controlli@{Controlli}!controllodestinazione@{controllodestinazione}}
+\index{controllodestinazione@{controllodestinazione}!Controlli@{Controlli}}
+\doxysubsubsection{\texorpdfstring{controllodestinazione()}{controllodestinazione()}}
+{\footnotesize\ttfamily int controllodestinazione (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$}]{scacchiera,  }\item[{int}]{a,  }\item[{int}]{b,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{player }\end{DoxyParamCaption})}
+
+Funzione che controlla la destinazione della pedina.
+
+
+\begin{DoxyParams}{Parameters}
+{\em scacchiera} & = Puntatore alla scacchiera \\
+\hline
+{\em a} & = posizione x di (x,y) dove è presente la pedina \\
+\hline
+{\em b} & = posizione y di (x,y) dove è presente la pedina \\
+\hline
+{\em x} & = posizione x di (x,y) dove sposto la pedina \\
+\hline
+{\em y} & = posizione y di (x,y) dove sposto la pedina \\
+\hline
+{\em player} & = giocatore \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\bfseries{0}} nel caso non fosse possibile un\textquotesingle{}azione, {\bfseries{1}} nel caso fosse possibile l\textquotesingle{}azione.
+\end{DoxyReturn}
+Funzione che controlla la destinazione della pedina.
+
+
+\begin{DoxyParams}{Parameters}
+{\em scacchiera} & = Puntatore alla scacchiera \\
+\hline
+{\em a} & = posizione x di (x,y) dove è presente la pedina \\
+\hline
+{\em b} & = posizione y di (x,y) dove è presente la pedina \\
+\hline
+{\em x} & = posizione x di (x,y) dove sposto la pedina \\
+\hline
+{\em y} & = posizione y di (x,y) dove sposto la pedina \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\bfseries{0}} nel caso non fosse possibile un\textquotesingle{}azione, {\bfseries{1}} nel caso fosse possibile l\textquotesingle{}azione. 
+\end{DoxyReturn}
+{\bfseries{Condizione in cui la destinazione è fuori dalla scacchiera.}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}(x<0 || y<0 || x>=7 || y>=7)\{}
+\DoxyCodeLine{     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+{\bfseries{Condizione in cui non si muova in obliquo quindi solamente in avanti.}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}(b==y)\{}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+{\bfseries{Condizione in cui si sposta in una casella \# cioè una casella non accessibile.}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}((x+y)\%2 != 0)\{}
+\DoxyCodeLine{     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+{\bfseries{Controllo che sia una casella vuota.}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if} (scacchiera[x][y].composition[0] != 0) \{}
+\DoxyCodeLine{     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+{\bfseries{Controllo che non stia saltando oltre le 3 caselle.}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if} (abs(a -\/ x) > 3 || abs(b -\/ y) > 3) \{}
+\DoxyCodeLine{     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+{\bfseries{Controllo che se è giocatore 1 o 2 non torni indietro.}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if} (player == 2) \{}
+\DoxyCodeLine{     \textcolor{keywordflow}{if} (a < x) \{}
+\DoxyCodeLine{         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{     \}}
+\DoxyCodeLine{ \}}
+\DoxyCodeLine{ \textcolor{keywordflow}{if} (player == 1) \{}
+\DoxyCodeLine{     \textcolor{keywordflow}{if} (a > x) \{}
+\DoxyCodeLine{         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{     \}}
+\DoxyCodeLine{ \}}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__Controlli_ga69b4af7fe90b1218e1c92301e430a07e}\label{group__Controlli_ga69b4af7fe90b1218e1c92301e430a07e}} 
+\index{Controlli@{Controlli}!controllogrado@{controllogrado}}
+\index{controllogrado@{controllogrado}!Controlli@{Controlli}}
+\doxysubsubsection{\texorpdfstring{controllogrado()}{controllogrado()}}
+{\footnotesize\ttfamily int controllogrado (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$}]{scacchiera,  }\item[{int}]{a,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+Funzione che controlla la posizione piu alta della pedina e mi restituisce la posizione.
+
+
+\begin{DoxyParams}{Parameters}
+{\em scacchiera} & = puntatore alla scacchiera \\
+\hline
+{\em a} & = posizione x di (x,y) dove è presente la pedina \\
+\hline
+{\em b} & = posizione y di (x,y) dove è presente la pedina \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ritorna {\bfseries{da 0 a 2}}, cioè il valore dove è presente una pedina diversa 0 
+\end{DoxyReturn}
+{\bfseries{Controllo sempre che non mi indichi una pedina al di fuori della scacchiera, cosi non va a controllare in posizioni non allocate della memoria.}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}(a<0 || b<0 || a>=7 || b>=7) \{}
+\DoxyCodeLine{     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+{\bfseries{Caso in cui è una casella vuota}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if} (scacchiera[a][b].composition[0] == 0) \{}
+\DoxyCodeLine{     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+{\bfseries{Caso in cui in in posizione 1 non ci sia nulla e in posizione 0 ci sia un numero.}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if} (scacchiera[a][b].composition[1] == 0 \&\& scacchiera[a][b].composition[0] != 0) \{}
+\DoxyCodeLine{     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{ \}}
+\end{DoxyCode}
+
+
+{\bfseries{Caso in cui in in posizione 2 non ci sia nulla e in posizione 1 ci sia un numero.}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordflow}{if} (scacchiera[a][b].composition[2] == 0 \&\& scacchiera[a][b].composition[1] != 0) \{}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} 1;}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+{\bfseries{Nel caso in cui non si soddisfino gli altri casi, cioè nel caso in cui ci sia un numero on composition\mbox{[}0\mbox{]} e composizion\mbox{[}1\mbox{]} e infine anche in compsosition\mbox{[}2\mbox{]}.}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{return} 2;}
+\end{DoxyCode}
+\mbox{\Hypertarget{group__Controlli_ga692d3eeb8c4bd279ea8eecee895d8b15}\label{group__Controlli_ga692d3eeb8c4bd279ea8eecee895d8b15}} 
+\index{Controlli@{Controlli}!controllopedina@{controllopedina}}
+\index{controllopedina@{controllopedina}!Controlli@{Controlli}}
+\doxysubsubsection{\texorpdfstring{controllopedina()}{controllopedina()}}
+{\footnotesize\ttfamily int controllopedina (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structtower}{tower\+\_\+t}} $\ast$$\ast$}]{scacchiera,  }\item[{int}]{a,  }\item[{int}]{b,  }\item[{int}]{player }\end{DoxyParamCaption})}
+
+Funzione che fa il controllo sulla posizione della pedina. \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__Controlli_ga69b4af7fe90b1218e1c92301e430a07e}{controllogrado()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em scacchiera} & = puntatore a scacchiera \\
+\hline
+{\em a} & = valore x di (x,y) dove è presente la pedina \\
+\hline
+{\em b} & = valore y di (x,y) dove è presente la pedina \\
+\hline
+{\em player} & = valore da 1 a 4 dove indica il giocatore \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\bfseries{0}} nel caso non rispetti i controlli, altrimenti {\bfseries{1}} 
+\end{DoxyReturn}
+{\bfseries{Controllo inanzitutto che la pedina non sia al di fuori della scacchiera.}}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}(a<0 || b<0 || a>7 || b>7)\{}
+\DoxyCodeLine{     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+{\bfseries{Controllo che non sia una posizione in cui non sia presente la pedina}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}((a+b)\%2!=0)\{}
+\DoxyCodeLine{     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+{\bfseries{Controllo che non sia una casella vuota.}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if} (scacchiera[a][b].composition[0] == 0) \{}
+\DoxyCodeLine{     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+{\bfseries{Controllo che la pedina sia quella del giocatore.}} 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if} ((giocatore -\/ player) != 0 \&\& (giocatore -\/ player) != 2) \{}
+\DoxyCodeLine{     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
