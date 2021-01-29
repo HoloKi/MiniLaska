@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/Utente/Desktop/minilaska/laska.c" "C:/Users/Utente/Desktop/minilaska/cmake-build-debug/CMakeFiles/minilaska.dir/laska.c.obj"
-  "C:/Users/Utente/Desktop/minilaska/main.c" "C:/Users/Utente/Desktop/minilaska/cmake-build-debug/CMakeFiles/minilaska.dir/main.c.obj"
+  "C:/Users/Khiem/Desktop/minilaska/laska.c" "C:/Users/Khiem/Desktop/minilaska/cmake-build-debug/CMakeFiles/minilaska.dir/laska.c.obj"
+  "C:/Users/Khiem/Desktop/minilaska/main.c" "C:/Users/Khiem/Desktop/minilaska/cmake-build-debug/CMakeFiles/minilaska.dir/main.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "MSVC")
 

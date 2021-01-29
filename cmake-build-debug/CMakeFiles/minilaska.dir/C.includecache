@@ -6,21 +6,15 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Utente/Desktop/minilaska/laska.c
+C:/Users/Khiem/Desktop/minilaska/laska.c
 stdio.h
 -
 stdlib.h
 -
 laska.h
-C:/Users/Utente/Desktop/minilaska/laska.h
+C:/Users/Khiem/Desktop/minilaska/laska.h
 
-C:/Users/Utente/Desktop/minilaska/laska.h
+C:/Users/Khiem/Desktop/minilaska/laska.h
 stddef.h
--
-
-C:/Users/Utente/Desktop/minilaska/main.c
-laska.h
-C:/Users/Utente/Desktop/minilaska/laska.h
-stdio.h
 -
 

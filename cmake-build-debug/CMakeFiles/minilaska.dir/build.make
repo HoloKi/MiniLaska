@@ -38,19 +38,19 @@ NULL=nul
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2020.2.1\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2020.1.2\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files\JetBrains\CLion 2020.2.1\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "C:\Program Files\JetBrains\CLion 2020.1.2\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Utente\Desktop\minilaska
+CMAKE_SOURCE_DIR = C:\Users\Khiem\Desktop\minilaska
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Utente\Desktop\minilaska\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\Khiem\Desktop\minilaska\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles\minilaska.dir\depend.make
@@ -63,40 +63,40 @@ include CMakeFiles\minilaska.dir\flags.make
 
 CMakeFiles\minilaska.dir\main.c.obj: CMakeFiles\minilaska.dir\flags.make
 CMakeFiles\minilaska.dir\main.c.obj: ..\main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Utente\Desktop\minilaska\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/minilaska.dir/main.c.obj"
-	C:\PROGRA~2\MICROS~2\2019\ENTERP~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\minilaska.dir\main.c.obj /FdCMakeFiles\minilaska.dir\ /FS -c C:\Users\Utente\Desktop\minilaska\main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Khiem\Desktop\minilaska\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/minilaska.dir/main.c.obj"
+	C:\PROGRA~2\MICROS~2\2019\ENTERP~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\minilaska.dir\main.c.obj /FdCMakeFiles\minilaska.dir\ /FS -c C:\Users\Khiem\Desktop\minilaska\main.c
 <<
 
 CMakeFiles\minilaska.dir\main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/minilaska.dir/main.c.i"
-	C:\PROGRA~2\MICROS~2\2019\ENTERP~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe > CMakeFiles\minilaska.dir\main.c.i @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Utente\Desktop\minilaska\main.c
+	C:\PROGRA~2\MICROS~2\2019\ENTERP~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\minilaska.dir\main.c.i @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Khiem\Desktop\minilaska\main.c
 <<
 
 CMakeFiles\minilaska.dir\main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minilaska.dir/main.c.s"
-	C:\PROGRA~2\MICROS~2\2019\ENTERP~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\minilaska.dir\main.c.s /c C:\Users\Utente\Desktop\minilaska\main.c
+	C:\PROGRA~2\MICROS~2\2019\ENTERP~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\minilaska.dir\main.c.s /c C:\Users\Khiem\Desktop\minilaska\main.c
 <<
 
 CMakeFiles\minilaska.dir\laska.c.obj: CMakeFiles\minilaska.dir\flags.make
 CMakeFiles\minilaska.dir\laska.c.obj: ..\laska.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Utente\Desktop\minilaska\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/minilaska.dir/laska.c.obj"
-	C:\PROGRA~2\MICROS~2\2019\ENTERP~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\minilaska.dir\laska.c.obj /FdCMakeFiles\minilaska.dir\ /FS -c C:\Users\Utente\Desktop\minilaska\laska.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Khiem\Desktop\minilaska\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/minilaska.dir/laska.c.obj"
+	C:\PROGRA~2\MICROS~2\2019\ENTERP~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\minilaska.dir\laska.c.obj /FdCMakeFiles\minilaska.dir\ /FS -c C:\Users\Khiem\Desktop\minilaska\laska.c
 <<
 
 CMakeFiles\minilaska.dir\laska.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/minilaska.dir/laska.c.i"
-	C:\PROGRA~2\MICROS~2\2019\ENTERP~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe > CMakeFiles\minilaska.dir\laska.c.i @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Utente\Desktop\minilaska\laska.c
+	C:\PROGRA~2\MICROS~2\2019\ENTERP~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe > CMakeFiles\minilaska.dir\laska.c.i @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Khiem\Desktop\minilaska\laska.c
 <<
 
 CMakeFiles\minilaska.dir\laska.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minilaska.dir/laska.c.s"
-	C:\PROGRA~2\MICROS~2\2019\ENTERP~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
- /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\minilaska.dir\laska.c.s /c C:\Users\Utente\Desktop\minilaska\laska.c
+	C:\PROGRA~2\MICROS~2\2019\ENTERP~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\cl.exe @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\minilaska.dir\laska.c.s /c C:\Users\Khiem\Desktop\minilaska\laska.c
 <<
 
 # Object files for target minilaska
@@ -111,9 +111,9 @@ minilaska.exe: CMakeFiles\minilaska.dir\main.c.obj
 minilaska.exe: CMakeFiles\minilaska.dir\laska.c.obj
 minilaska.exe: CMakeFiles\minilaska.dir\build.make
 minilaska.exe: CMakeFiles\minilaska.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Utente\Desktop\minilaska\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable minilaska.exe"
-	"C:\Program Files\JetBrains\CLion 2020.2.1\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\minilaska.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~2\2019\ENTERP~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\minilaska.dir\objects1.rsp @<<
- /out:minilaska.exe /implib:minilaska.lib /pdb:C:\Users\Utente\Desktop\minilaska\cmake-build-debug\minilaska.pdb /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Khiem\Desktop\minilaska\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable minilaska.exe"
+	"C:\Program Files\JetBrains\CLion 2020.1.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\minilaska.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~2\2019\ENTERP~1\VC\Tools\MSVC\1426~1.288\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\minilaska.dir\objects1.rsp @<<
+ /out:minilaska.exe /implib:minilaska.lib /pdb:C:\Users\Khiem\Desktop\minilaska\cmake-build-debug\minilaska.pdb /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<
 
 # Rule to build all files generated by this target.
@@ -126,6 +126,6 @@ CMakeFiles\minilaska.dir\clean:
 .PHONY : CMakeFiles\minilaska.dir\clean
 
 CMakeFiles\minilaska.dir\depend:
-	$(CMAKE_COMMAND) -E cmake_depends "NMake Makefiles" C:\Users\Utente\Desktop\minilaska C:\Users\Utente\Desktop\minilaska C:\Users\Utente\Desktop\minilaska\cmake-build-debug C:\Users\Utente\Desktop\minilaska\cmake-build-debug C:\Users\Utente\Desktop\minilaska\cmake-build-debug\CMakeFiles\minilaska.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "NMake Makefiles" C:\Users\Khiem\Desktop\minilaska C:\Users\Khiem\Desktop\minilaska C:\Users\Khiem\Desktop\minilaska\cmake-build-debug C:\Users\Khiem\Desktop\minilaska\cmake-build-debug C:\Users\Khiem\Desktop\minilaska\cmake-build-debug\CMakeFiles\minilaska.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles\minilaska.dir\depend
 

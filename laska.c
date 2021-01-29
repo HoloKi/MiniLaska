@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 #include "laska.h"
+
+
 
 /**FUNZIONE DEL GIOCO\n
  * Ad ogni pedina viene assegnato un numero che indica:\n
@@ -134,7 +135,7 @@ int controllodestinazione(tower_t **scacchiera,int a,int b,int x, int y,int play
                             return 0;
                        }
                      @endcode*/
-                    if (abs(a - x) > 3 || abs(b - y) > 3) {
+                    if (abs(a - x) >= 3 || abs(b - y) >= 3) {
                         return 0;
                     } else {
                         /** **Controllo che se è giocatore 1 o 2 non torni indietro.**
@@ -252,12 +253,8 @@ int controllo_pedine_presenti(tower_t** scacchiera){
                 else{
                     if(scacchiera[i][j].composition[controllogrado(scacchiera,i, j)]==2 || scacchiera[i][j].composition[controllogrado(scacchiera,i, j)]==4)
                         conta2++;
-                    else
-                        continue;
                 }
             }
-            else
-                continue;
         }
     }
     if(conta1 == 0){  /** caso in cui il player1 non ha pedine che comandano, ovvero non ha pedine presenti in cima ad alcuna torre **/
